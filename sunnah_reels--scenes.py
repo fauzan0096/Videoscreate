@@ -184,7 +184,8 @@ def t_ask(c, u, i, n):
     from .text import font
     c.ground(); ax = lerp(90, 300, seg(u, 0, .22)); walking = u < .22
     c.figure(ax, walk_pose(u * 60) if walking else POSES["stand"])
-    c.figure(480, POSES["stand"], flip=True, col=(255, 240, 200))
+    c.line([(480, GROUND), (480, GROUND - 120)], 4, c.pal["dim"])      # the answer is a light - no figure is drawn for the Prophet ﷺ
+    c.glow((480, GROUND - 100), 70, c.pal["glow"], .3)
     if i >= 1: c.text((ax, GROUND - 215 - 6 * math.sin(u * 30)), "?", font("latin", 64), c.pal["glow"])
     if i >= n - 1: c.glow((480, GROUND - 120), 200 + 20 * math.sin(u * 20), c.pal["glow"], .45)
 
@@ -205,5 +206,22 @@ def t_myth(c, u, i, n):
         else: c.line([(cx - 36, cy + 2), (cx - 8, cy + 30), (cx + 40, cy - 30)], 12, col)
         c.glow((cx, cy), 220, col, .25)
 
-TEMPLATES = dict(ask=t_ask, myth=t_myth, walk_light=t_walk_light, counter=t_counter, meet=t_meet, prayer=t_prayer, home=t_home,
+def t_relay(c, u, i, n):
+    """Series 'isnad' (How this reached you): a light travels down the chain of named narrators to the viewer."""
+    from .text import font
+    if c.t >= c.cap: return                     # chain lives only during the caption phase (the hadith card follows)
+    chain = [("The Prophet ﷺ", 1)] + [(nm, 0) for nm in c.idea.get("chain", [])] + [("You", 0)]
+    N = len(chain); y0, y1, x = 500, 1060, 170
+    ys = [y0 + (y1 - y0) * k / max(1, N - 1) for k in range(N)]; oy = lerp(y0, y1, seg(c.t / c.cap, .05, .92))
+    c.line([(x, y0), (x, y1)], 3, (60, 58, 56)); c.line([(x, y0), (x, oy)], 5, c.pal["glow"])
+    for k, (nm, src) in enumerate(chain):
+        lit = oy >= ys[k] - 2; r = 20 if src else 13
+        if lit: c.circ((x, ys[k]), r, fill=c.pal["glow"])
+        else: c.circ((x, ys[k]), r, outline=(95, 92, 86), w=3)
+        if lit:
+            from .text import draw_mixed
+            draw_mixed(c.bd, (x + 46, ys[k]), nm, font("latin", 36), (240, 236, 228), "lm")
+    c.glow((x, oy), 70, c.pal["glow"], .7)
+
+TEMPLATES = dict(relay=t_relay, ask=t_ask, myth=t_myth, walk_light=t_walk_light, counter=t_counter, meet=t_meet, prayer=t_prayer, home=t_home,
                  give=t_give, sleep=t_sleep, meal=t_meal, tree=t_tree)

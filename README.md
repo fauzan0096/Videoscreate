@@ -38,3 +38,14 @@ Add a function to `sunnah_reels/scenes.py` and register it in `TEMPLATES`; use i
 - `.claude/skills/sunnah-reel-agent/SKILL.md` : the agent. Open this repo in Claude Code / Claude Desktop with the Shamela connector, say
   "aaj ka reel: <hadith ya sawaal>" and it verifies on Shamela, fills the data, renders and hands back the mp4 + text.
 - ids 101-104 and 201-204 are verified on Shamela (2026-10-31); `translation_note` on each says what to eyeball before posting.
+
+## v4: Studio app (web/index.html) — no coding needed
+v5: Roman Urdu/Hindi lines, thumbnail PNG, bulk paste (---separated blocks).
+Open `web/index.html` (GitHub Pages) on your phone: paste Arabic + English + reference + captions -> scrub/preview -> Record.
+Add many to the **Queue**, then **Record ALL** = non-stop batch. Export/Import JSON to move queues between devices.
+Python side: `python -m sunnah_reels ...` as above (higher quality, run from a laptop). `pip install -r requirements.txt` now includes Arabic shaping libs.
+
+## v6: new series "Chain" (isnad) + fixes
+- `data/series_isnad.json` (id 301) and `python -m sunnah_reels new isnad --chain "A;B;C" ...`. In the Studio app: Scene = "How it reached you (chain)", one name per line (or `CHAIN: A|B|C` in bulk paste).
+- The Prophet ﷺ is no longer drawn as a figure in the Question->answer scene: the answer is a light (a person-less lamp). Keep it that way.
+- The salawat sign ﷺ is drawn with the Arabic font (Latin fonts do not have it). Put `Amiri-Regular.ttf` in `assets/fonts/` (see README there) or it may show as a box.

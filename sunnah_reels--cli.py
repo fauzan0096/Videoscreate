@@ -1,11 +1,11 @@
-import argparse, json, os, sys, datetime
+import argparse, json, os, sys, datetime, re, shutil
 from .render import Renderer
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "ideas.json")
 
 
-FILES = ["ideas.json", "series_qa.json", "series_myth.json"]
+FILES = ["ideas.json", "series_qa.json", "series_myth.json", "series_isnad.json"]
 DDIR = os.path.dirname(DATA)
 
 def load():
@@ -22,7 +22,9 @@ def save(ideas):
         if part: json.dump(part, open(os.path.join(DDIR, f), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 def get(ideas, i):
-    return next(x for x in ideas if x["id"] == i)
+    for x in ideas:
+        if x["id"] == i: return x
+    sys.exit(f"No idea with id {i}. Run: python -m sunnah_reels list")
 
 def parse_ids(s, ideas):
     out = []
@@ -37,7 +39,11 @@ def cmd_list(a):
         if a.series and x.get("series", "sunnah") != a.series: continue
         print(f'{x["id"]:>3} {"✓" if x["status"]=="verified" else "·"} [{x["theme"]:<9}] {x["title"]}  —  {x["ref"]}')
 
+def need_ffmpeg():
+    if not shutil.which("ffmpeg"): sys.exit("ffmpeg not found. Install it (Windows: winget install ffmpeg | Mac: brew install ffmpeg | Linux: apt install ffmpeg)")
+
 def cmd_check(a):
+    need_ffmpeg()
     ideas = load(); bad = 0
     for x in ideas:
         for k in ("title", "lines", "quote_en", "ref", "template"):
@@ -47,7 +53,7 @@ def cmd_check(a):
     print(f"{len(ideas)} ideas · {v} verified · {len(ideas)-v} need Shamela verification · {bad} problems")
 
 def out_path(x, out):
-    return os.path.join(out, f"{x['id']:03d}_{x['title'].lower().replace(' ', '_').replace('’','')}.mp4")
+    return os.path.join(out, f"{x['id']:03d}_" + re.sub(r"[^a-z0-9]+", "_", x["title"].lower()).strip("_")[:50] + ".mp4")
 
 def post_text(x):
     url = (x.get("shamela") or {}).get("url", "")
@@ -55,6 +61,7 @@ def post_text(x):
         "\n(Meaning translation — check the source.)\nSend this to someone who needs it.\n\n#sunnah #hadith #islam #shorts #reels\n"
 
 def render_one(x, a, draft=False):
+    need_ffmpeg()
     r = Renderer(x, fps=a.fps, draft=draft, target=getattr(a, "target", None))
     path = out_path(x, a.out); print(f"#{x['id']} {x['title']}  ({r.tl['total']:.0f}s)")
     if r.tl["total"] > 60.5: print("  warning: longer than 60s - shorten lines/quote")
@@ -63,38 +70,44 @@ def render_one(x, a, draft=False):
 
 def cmd_new(a):
     """One command = one finished reel. Give the brief, get video + post text."""
-    ideas = load(); base = 101 if a.series == "qa" else 201
+    ideas = load(); base = dict(qa=101, myth=201, isnad=301)[a.series]
     nid = max([x["id"] for x in ideas if x.get("series") == a.series] + [base - 1]) + 1
-    if a.series == "qa":
+    chain = [c.strip() for c in (a.chain or "").split(";") if c.strip()]
+    if a.series == "isnad":
+        if not chain: sys.exit("isnad needs --chain \"Companion;Follower;...;Collector\" (names exactly as written in the book's sanad)")
+        lines = ["How did this hadith reach you?", f"{len(chain)} named people. One chain.", "^Follow the light."]; tpl = "relay"
+    elif a.series == "qa":
         lines = [f"{a.who} asked the Prophet ﷺ:", f"“{a.text}”", "^" + (a.hook or "Listen to the answer.")]; tpl = "ask"
     else:
         vl = dict(sahih="Yes — it is authentic.", hasan="Yes — it is authentic (hasan).", weak="Hadith scholars graded it weak.")[a.verdict]
         lines = ["Everyone says:", f"“{a.text}”", "Is it a real hadith?", "^" + (a.hook or vl)]; tpl = "myth"
-    x = dict(id=nid, series=a.series, theme=a.series, template=tpl, title=a.title or a.text[:40], lines=lines, quote_en=a.quote, ref=a.ref,
+    x = dict(id=nid, series=a.series, theme=a.series, template=tpl, title=a.title or (a.text or a.ref)[:40], lines=lines, quote_en=a.quote, ref=a.ref,
              arabic=a.arabic or "", target=a.target or 40, status="unverified")
     if a.series == "myth": x["verdict"] = a.verdict
+    if chain: x["chain"] = chain
     if a.book_id and a.page_id:
         x["shamela"] = dict(book_id=a.book_id, page_id=a.page_id, url=f"https://shamela.ws/book/{a.book_id}/{a.page_id}", checked=str(datetime.date.today()))
         if x["arabic"]: x["status"] = "verified"
-    x["_src"] = "series_qa.json" if a.series == "qa" else "series_myth.json"
+    x["_src"] = f"series_{a.series}.json"
     ideas.append(x); save(ideas); print("saved idea", nid, "·", x["status"])
     if not a.no_render: render_one(x, a, draft=x["status"] != "verified")
 
 def cmd_daily(a):
     """Render the next verified, not-yet-rendered idea (run once a day)."""
     for x in load():
-        if x["status"] == "verified" and x.get("series") in (a.series or ("qa", "myth")) and not os.path.exists(out_path(x, a.out)):
+        if x["status"] == "verified" and (not a.series or x.get("series", "sunnah") in a.series) and not os.path.exists(out_path(x, a.out)):
             a.target = a.target or 40; return render_one(x, a)
     print("Nothing left to render. Add a new idea:  python -m sunnah_reels new --help")
 
 def cmd_render(a):
     ideas = load()
+    if not a.preview: need_ffmpeg()
     for i in parse_ids(a.ids, ideas):
         x = get(ideas, i); draft = x["status"] != "verified"
         if draft and not a.draft:
             print(f"#{i} {x['title']}: source not verified on Shamela. Verify it (see README) or pass --draft."); continue
         r = Renderer(x, fps=a.fps, draft=draft, target=a.target)
-        path = os.path.join(a.out, f"{i:03d}_{x['title'].lower().replace(' ', '_').replace('’','')}.mp4")
+        path = out_path(x, a.out)
         if a.preview:
             os.makedirs(a.out, exist_ok=True)
             for k, f in enumerate([.12, .5, .8, .93]):
@@ -121,7 +134,7 @@ def main(argv=None):
     q.add_argument("--music"); q.add_argument("--target", type=int, help="seconds, 30-60"); q.add_argument("--draft", action="store_true", help="allow unverified (watermarked)"); q.add_argument("--preview", action="store_true"); q.set_defaults(f=cmd_render)
     q = s.add_parser("schedule"); q.add_argument("--start", default=str(datetime.date.today())); q.add_argument("--days", type=int, default=60); q.set_defaults(f=cmd_schedule)
     q = s.add_parser("mark-verified"); q.add_argument("id", type=int); q.add_argument("--arabic", required=True); q.add_argument("--book-id", type=int, required=True); q.add_argument("--page-id", type=int, required=True); q.set_defaults(f=cmd_mark)
-    q = s.add_parser("new"); q.add_argument("series", choices=["qa", "myth"]); q.add_argument("--text", required=True, help="qa: the question | myth: the claim")
+    q = s.add_parser("new"); q.add_argument("series", choices=["qa", "myth", "isnad"]); q.add_argument("--text", default="", help="qa: the question | myth: the claim"); q.add_argument("--chain", help="isnad: names separated by ; in transmission order (Companion first, collector last)")
     q.add_argument("--who", default="A companion"); q.add_argument("--quote", required=True, help="English meaning of the verified text"); q.add_argument("--ref", required=True)
     q.add_argument("--arabic"); q.add_argument("--book-id", type=int); q.add_argument("--page-id", type=int); q.add_argument("--verdict", default="sahih", choices=["sahih", "hasan", "weak"])
     q.add_argument("--hook"); q.add_argument("--title"); q.add_argument("--target", type=int); q.add_argument("--no-render", action="store_true"); q.add_argument("--out", default="out"); q.add_argument("--fps", type=int, default=30); q.add_argument("--music"); q.set_defaults(f=cmd_new)

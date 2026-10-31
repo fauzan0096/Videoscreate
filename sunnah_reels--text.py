@@ -55,3 +55,21 @@ def wrap(draw, text, fnt, maxw, arabic=False):
     if cur:
         lines.append(cur)
     return lines
+
+
+def draw_mixed(d, xy, s, fnt, fill, anchor="ma"):
+    """Draw Latin text where the salawat ligature (U+FDFA) is taken from the Arabic font (Latin fonts lack it).
+    anchor: 'ma' (centre, top) or 'lm' (left, middle)."""
+    if "\uFDFA" not in s:
+        d.text(xy, s, font=fnt, fill=fill, anchor=anchor); return
+    af = font("arabic", fnt.size)
+    segs = []
+    for k, part in enumerate(s.split("\uFDFA")):
+        if k: segs.append(("\uFDFA", af))
+        if part: segs.append((part, fnt))
+    total = sum(d.textlength(t, font=f) for t, f in segs)
+    x = xy[0] - total / 2 if anchor[0] == "m" else xy[0]
+    base = "ls" if anchor[1] == "a" else "lm"
+    y = xy[1] + (fnt.size * 0.8 if anchor[1] == "a" else 0)
+    for t, f in segs:
+        d.text((x, y), t, font=f, fill=fill, anchor=base); x += d.textlength(t, font=f)

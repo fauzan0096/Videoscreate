@@ -2,75 +2,137 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Sunnah Reels Studio</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#05060c">
 <style>
-:root{--bg:#05060c;--fg:#f0ece4;--gold:#e8be6e;--card:#12141f}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px system-ui,sans-serif;padding:env(safe-area-inset-top) 12px env(safe-area-inset-bottom);text-align:center}
-h1{font-size:18px;color:var(--gold);margin:12px 0 8px}
-.tabs,.list{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0}
-button,select{background:var(--card);color:var(--fg);border:1px solid #333;border-radius:10px;padding:10px 14px;font-size:15px}
-button.on{border-color:var(--gold);color:var(--gold)}
-canvas{width:min(100%,calc((100vh - 230px)*.5625));aspect-ratio:9/16;background:#000;border-radius:12px;display:block;margin:10px auto}
-.warn{color:#ff7b7b;font-size:13px;min-height:18px}input{background:var(--card);color:var(--fg);border:1px solid #333;border-radius:10px;padding:8px;width:160px}
+:root{--bg:#05060c;--fg:#f0ece4;--gold:#e8be6e;--card:#12141f;--ln:#2a2d3d;--dim:#8d8a80}
+*{box-sizing:border-box}body{margin:0 auto;max-width:560px;background:var(--bg);color:var(--fg);font:15px system-ui,sans-serif;padding:env(safe-area-inset-top) 12px calc(env(safe-area-inset-bottom) + 30px)}
+h1{font-size:18px;color:var(--gold);text-align:center;margin:12px 0}h2{font-size:14px;color:var(--gold);margin:18px 0 6px}
+canvas{width:min(100%,calc(55vh*.5625));aspect-ratio:9/16;display:block;margin:6px auto;border-radius:12px;background:#000}
+input,textarea,select,button{width:100%;background:var(--card);color:var(--fg);border:1px solid var(--ln);border-radius:10px;padding:10px;font:inherit}
+textarea{min-height:64px;resize:vertical}#ar{direction:rtl;font-size:20px;min-height:90px}
+label{display:block;font-size:12px;color:var(--dim);margin:10px 0 3px}.r{display:flex;gap:8px;margin:8px 0}.r>*{flex:1}
+button{cursor:pointer}button.go{border-color:var(--gold);color:var(--gold)}#warn{color:#ff7b7b;font-size:13px;min-height:18px;text-align:center}
+.q{display:flex;gap:6px;margin:5px 0}.q span{flex:1;padding:9px;background:var(--card);border-radius:10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.q button{width:44px}
+small{color:var(--dim)}input[type=checkbox]{width:auto}
 </style></head><body>
 <h1>☪ Sunnah Reels Studio</h1>
-<div class="tabs"><button id="tq" class="on">Sahaba ne poocha</button><button id="tm">Hadith ya Afwah?</button></div>
-<div class="list" id="list"></div>
 <canvas id="cv" width="540" height="960"></canvas>
-<div class="warn" id="warn"></div>
-<div class="list"><button id="play">▶ Preview</button><button id="rec">⏺ Record video</button><input id="ch" placeholder="@channel name"></div>
-<script src="data.js"></script>
+<input type="range" id="sl" min="0" max="1" step="0.005" value="0.78" aria-label="scrub">
+<div id="warn"></div>
+<div class="r"><button id="play">▶ Preview</button><button id="rec" class="go">⏺ Record video</button></div>
+
+<h2>1 · Hadith</h2>
+<div id="f">
+<label>Arabic matn (copy from Shamela, with tashkeel)</label><textarea id="ar" placeholder="الصلاة على وقتها"></textarea>
+<label>English meaning (mark as meaning, not the Arabic)</label><textarea id="en"></textarea>
+<label>Roman Urdu / Hindi meaning (optional — shown under the English)</label><textarea id="ur"></textarea>
+<label>Reference — book + number (+ who graded it, for myth reels)</label><input id="ref" placeholder="Sahih al-Bukhari 527">
+<label>Opening captions — one per line. Start a line with ^ to make it gold</label>
+<textarea id="hook" placeholder="Ibn Mas‘ud asked the Prophet ﷺ:&#10;“Which deed is most beloved to Allah?”&#10;^Not what most people guess."></textarea>
+<label>Roman Urdu / Hindi for each caption line (optional, same order as above)</label><textarea id="urh"></textarea>
+<label>Chain names (relay scene) — one per line, Companion first … collector last. The Prophet ﷺ and You are added for you</label><textarea id="chain"></textarea>
+<div class="r"><div><label>Scene</label><select id="tpl"><option value="ask">Question → answer</option><option value="myth">Real hadith? (verdict)</option><option value="relay">How it reached you (chain)</option><option value="walk">Walking to the light</option></select></div>
+<div><label>Verdict (myth only)</label><select id="vd"><option value="sahih">sahih</option><option value="hasan">hasan</option><option value="weak">weak</option></select></div></div>
+<div class="r"><div><label>Length (sec, 0 = auto)</label><input id="tg" type="number" min="0" max="60" value="0"></div><div><label>Channel watermark</label><input id="ch" placeholder="@yourchannel"></div></div>
+<label>Thumbnail text (max 3 words)</label><input id="th" placeholder="WHICH FIRST?">
+<label><input type="checkbox" id="ver"> I verified the Arabic + reference on Shamela myself (otherwise the video gets a DRAFT mark)</label>
+</div>
+<label>Background music (optional, rights-free only)</label><input id="mus" type="file" accept="audio/*">
+<div class="r"><button id="add" class="go">＋ Add to queue</button><button id="cp">Copy post text</button></div>
+
+<div class="r"><button id="thb">🖼 Save thumbnail (PNG)</button></div>
+<h2>2 · Queue (non-stop) <small id="qn"></small></h2>
+<div id="ql"></div>
+<div class="r"><button id="all" class="go">⏺ Record ALL</button><button id="smp">Load samples</button></div>
+<div class="r"><button id="exp">Export JSON</button><button id="imp">Import JSON</button><input id="impf" type="file" accept=".json" hidden></div>
+<h2>3 · Bulk paste</h2>
+<textarea id="bulk" style="min-height:150px" placeholder="AR: الصلاة على وقتها&#10;EN: Prayer at its proper time.&#10;REF: Sahih al-Bukhari 527&#10;CAP: Which deed is most beloved?|^Listen.&#10;UR: Waqt par namaz.&#10;URC: Kaunsa amal pasandeeda?|^Suno.&#10;SCENE: ask&#10;THUMB: WHICH FIRST?&#10;VERIFIED: yes&#10;---&#10;(next hadith…)"></textarea>
+<button id="bk" class="go">Add all to queue</button><br><br><small>Keys: AR EN REF CAP UR URC SCENE(ask/myth/relay/walk) CHAIN(a|b|c) VERDICT THUMB SEC VERIFIED. Separate hadith with a --- line. CAP/URC: lines split by |<br>Tip: Record ALL downloads one video after another. Keep the screen on and this tab open while it runs.</small>
+
+<script src="data.js" onerror="void 0"></script>
 <script>
-const W=540,H=960,G=640,cv=document.getElementById("cv"),x=cv.getContext("2d");
-const GOLD="#e8be6e",$=id=>document.getElementById(id);
-let series="qa",cur=null,t0=0,playing=false,recording=false,tl=null,stars=[];
-const dur=l=>Math.max(2.6,.38*l.replace(/^\^/,"").split(/\s+/).length+1);
-function timeline(i){const b=i.lines.map(l=>({t:l.replace(/^\^/,""),g:l[0]=="^",d:dur(l)}));
- const cap=b.reduce((a,v)=>a+v.d,0),q=3+.42*i.quote_en.split(/\s+/).length+1.5;return{b,cap,q,total:cap+q+2.6}}
-const ease=v=>v*v*(3-2*v),cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(u,a,b)=>ease(cl((u-a)/(b-a))),
- fade=(t,a,b,fi=.5,fo=.5)=>cl(Math.min((t-a)/fi,(b-t)/fo,1));
+const W=540,H=960,G=640,$=id=>document.getElementById(id),cv=$("cv"),x=cv.getContext("2d"),GOLD="#e8be6e";
+const AR="Amiri,'Geeza Pro','Noto Naskh Arabic','Traditional Arabic',serif",LT="'EB Garamond',Georgia,serif";
+let cur,tl,stars=[],playing=false,ed=-1,busy=false,Q=[];
+try{Q=JSON.parse(localStorage.getItem("q")||"[]")}catch(e){}
+const persist=()=>{try{localStorage.setItem("q",JSON.stringify(Q))}catch(e){}};
+const form=()=>({title:$("ref").value.trim()||"reel",lines:$("hook").value.split("\n").map(s=>s.trim()).filter(Boolean),quote_en:$("en").value.trim(),arabic:$("ar").value.trim(),ref:$("ref").value.trim(),template:$("tpl").value,verdict:$("vd").value,verified:$("ver").checked,target:+$("tg").value||0,channel:$("ch").value.trim(),ur:$("ur").value.trim(),urh:$("urh").value.split("\n").map(s=>s.trim()),thumb:$("th").value.trim(),chain:$("chain").value.split("\n").map(s=>s.trim()).filter(Boolean)});
+function fill(i){$("ar").value=i.arabic||"";$("en").value=i.quote_en||"";$("ref").value=i.ref||"";$("hook").value=(i.lines||[]).join("\n");$("tpl").value=["myth","ask","relay"].includes(i.template)?i.template:"walk";$("chain").value=(i.chain||[]).join("\n");$("vd").value=i.verdict||"sahih";$("tg").value=i.target||0;$("ur").value=i.ur||"";$("urh").value=(i.urh||[]).join("\n");$("th").value=i.thumb||"";$("ver").checked=!!i.verified;if(i.channel)$("ch").value=i.channel;redraw()}
+const wc=s=>s.split(/\s+/).filter(Boolean).length;
+function timeline(i){const L=i.lines.length?i.lines:["Listen to this hadith"];let b=L.map(l=>({t:l.replace(/^\^/,""),g:l[0]=="^",d:Math.max(2.6,.38*wc(l)+1)}));
+ let cap=b.reduce((a,v)=>a+v.d,0),q=3+.42*wc(i.quote_en)+.15*wc(i.arabic)+.25*wc(i.ur||"")+1.5;
+ if(i.target){const k=Math.max(1,(Math.min(i.target,60)-2.6)/(cap+q));b.forEach(v=>v.d*=k);cap*=k;q*=k}
+ return{b,cap,q,total:cap+q+2.6}}
+const ease=v=>v*v*(3-2*v),cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(u,a,b)=>ease(cl((u-a)/(b-a))),fade=(t,a,b,fi=.5,fo=.5)=>cl(Math.min((t-a)/fi,(b-t)/fo,1));
 function mkStars(){let s=7;const r=()=>(s=(s*9301+49297)%233280)/233280;stars=[...Array(70)].map(()=>[r()*W,r()*G*.8,r()*1.4+.4,r()*6])}
 function line(p,w,c){x.strokeStyle=c;x.lineWidth=w;x.lineCap="round";x.lineJoin="round";x.beginPath();p.forEach((q,k)=>k?x.lineTo(q[0],q[1]):x.moveTo(q[0],q[1]));x.stroke()}
-function fig(px,ph,col="#8a8a92",flip=false,reach=false){const f=flip?-1:1,s=Math.sin(ph),X=(a)=>px+a*f*.7,Y=(a)=>G+a*.7;
+function fig(px,ph,col="#8a8a92",flip=false,reach=false){const f=flip?-1:1,s=Math.sin(ph),X=a=>px+a*f*.7,Y=a=>G+a*.7;
  line([[X(0),Y(-70)],[X(0),Y(-140)]],7,col);line([[X(0),Y(-70)],[X(-6+13*s),Y(-36)],[X(-9+26*s),Y(0)]],7,col);
- line([[X(0),Y(-70)],[X(6-13*s),Y(-36)],[X(9-26*s),Y(0)]],7,col);
- line([[X(0),Y(-140)],reach?[X(52),Y(-128)]:[X(-10-22*s),Y(-85)]],7,col);x.fillStyle=col;x.beginPath();x.arc(X(0),Y(-162),13,0,7);x.fill()}
+ line([[X(0),Y(-70)],[X(6-13*s),Y(-36)],[X(9-26*s),Y(0)]],7,col);line([[X(0),Y(-140)],reach?[X(52),Y(-128)]:[X(-10-22*s),Y(-85)]],7,col);
+ x.fillStyle=col;x.beginPath();x.arc(X(0),Y(-162),13,0,7);x.fill()}
 function glow(cx,cy,r,col,a){const g=x.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,col);g.addColorStop(1,"transparent");x.globalAlpha=a;x.fillStyle=g;x.fillRect(cx-r,cy-r,2*r,2*r);x.globalAlpha=1}
-function txt(s,px,py,font,col,a,maxw=470,lh=1.3,rtl=false){if(a<=0)return py;x.globalAlpha=a;x.font=font;x.fillStyle=col;x.textAlign="center";x.direction=rtl?"rtl":"ltr";
- const sz=parseInt(font.match(/(\d+)px/)[1]);let cur="";const lines=[];s.split(" ").forEach(w=>{const t=(cur+" "+w).trim();if(x.measureText(t).width<=maxw||!cur)cur=t;else{lines.push(cur);cur=w}});lines.push(cur);
- lines.forEach(l=>{x.fillText(l,px,py);py+=sz*lh});x.globalAlpha=1;return py}
-function frame(t){const i=cur,T=tl,u=cl(t/(T.cap+T.q));
+function txt(s,px,py,sz,fam,col,a,maxw=470,lh=1.3,rtl=false){if(a<=0||!s)return py;x.globalAlpha=a;x.font=sz+"px "+fam;x.fillStyle=col;x.textAlign="center";x.direction=rtl?"rtl":"ltr";
+ let c="";const L=[];s.split(/\s+/).forEach(w=>{const t=(c+" "+w).trim();if(x.measureText(t).width<=maxw||!c)c=t;else{L.push(c);c=w}});L.push(c);
+ L.forEach(l=>{x.fillText(l,px,py);py+=sz*lh});x.globalAlpha=1;x.direction="ltr";return py}
+function frame(t){const i=cur,T=tl,u=cl(t/(T.cap+T.q)),n=T.b.length;
  const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,"#070914");g.addColorStop(1,"#03040a");x.fillStyle=g;x.fillRect(0,0,W,H);
  stars.forEach(s=>{x.globalAlpha=.4+.4*Math.sin(t*1.5+s[3]);x.fillStyle="#fff";x.fillRect(s[0],s[1],s[2],s[2])});x.globalAlpha=1;
- let bi=0,acc=0;T.b.forEach((b,k)=>{if(t>=acc)bi=k;acc+=b.d});const n=T.b.length;
- x.fillStyle="#12131c";x.fillRect(0,G,W,2);
- if(i.template=="ask"){const ax=90+210*seg(u,0,.22)*.9;fig(ax,u<.22?u*60:0);fig(360,0,"#ffe8b8",true);
+ let bi=0,acc=0;T.b.forEach((b,k)=>{if(t>=acc)bi=k;acc+=b.d});x.fillStyle="#12131c";x.fillRect(0,G,W,2);
+ if(i.template=="ask"){const ax=90+190*seg(u,0,.22);fig(ax,u<.22?u*60:0);line([[360,G],[360,G-110]],4,"#6a6a72");glow(360,G-90,70,GOLD,.3);
   if(bi>=1){x.font="48px serif";x.fillStyle=GOLD;x.textAlign="center";x.fillText("?",ax,G-175-5*Math.sin(t*4))}
   if(bi>=n-1)glow(360,G-90,170+15*Math.sin(t*3),GOLD,.45)}
- else{fig(100,0,"#8a8a92",false,true);x.fillStyle="#4a3a28";x.strokeStyle=GOLD;x.lineWidth=3;x.fillRect(175,290,210,225);x.strokeRect(175,290,210,225);
+ else if(i.template=="myth"){fig(100,0,"#8a8a92",false,true);x.fillStyle="#4a3a28";x.strokeStyle=GOLD;x.lineWidth=3;x.fillRect(175,290,210,225);x.strokeRect(175,290,210,225);
   for(let k=0;k<5;k++)line([[198,325+k*37],[362,325+k*37]],2,"#78644a");
   const v=i.verdict||"sahih",col=v=="weak"?"#cd463c":v=="hasan"?GOLD:"#46aa64";
-  if(bi<n-1){x.font="54px serif";x.fillStyle=GOLD;x.fillText("?",280,255-4*Math.sin(t*4))}
+  if(bi<n-1){x.font="54px serif";x.fillStyle=GOLD;x.textAlign="center";x.fillText("?",280,255-4*Math.sin(t*4))}
   else{const r=52*(1+.1*Math.sin(t*4));x.beginPath();x.arc(280,400,r,0,7);x.strokeStyle=col;x.lineWidth=8;x.stroke();
    if(v=="weak"){line([[255,375],[305,425]],9,col);line([[305,375],[255,425]],9,col)}else line([[252,402],[272,424],[310,378]],9,col);glow(280,400,170,col,.25)}}
- acc=0;T.b.forEach(b=>{const a=fade(t,acc,acc+b.d,.5,.45);txt(b.t,W/2,120,"40px Georgia,serif",b.g?GOLD:"#f0ece4",a);acc+=b.d});
- if(t>=T.cap&&t<T.cap+T.q){x.fillStyle="rgba(0,0,0,"+.66*fade(t,T.cap,T.cap+T.q,.6,.5)+")";x.fillRect(0,0,W,H);
-  const e=T.cap+T.q;let y=170;if(i.arabic)y=txt(i.arabic,W/2,y,"42px 'Amiri',serif",GOLD,fade(t,T.cap+.3,e,.8,.5),470,1.6,true)+20;
-  y=txt("“"+i.quote_en+"”",W/2,y,"29px Georgia,serif","#f0ece4",fade(t,T.cap+(i.arabic?1.6:.3),e,.8,.5));txt(i.ref,W/2,y+16,"20px Georgia,serif",GOLD,fade(t,T.cap+2.4,e,.8,.5))}
- if(t>=T.cap+T.q)txt("Send this to someone who needs it.",W/2,390,"34px Georgia,serif","#f0ece4",fade(t,T.cap+T.q,T.total+.5,.6,1));
- const ch=$("ch").value.trim();if(ch)txt(ch,W/2,H-60,"20px system-ui",GOLD,.8);
- if(i.status!="verified")txt("DRAFT · UNVERIFIED SOURCE",W/2,H-24,"14px monospace","#ff5a5a",.9)}
-function pick(i){cur=i;tl=timeline(i);mkStars();$("warn").textContent=i.status!="verified"?"⚠ Source not verified on Shamela — draft only. Verify before posting.":"";frame(0)}
-function run(){t0=performance.now();playing=true;(function loop(){if(!playing)return;const t=(performance.now()-t0)/1000;frame(Math.min(t,tl.total));
- if(t>=tl.total){playing=false;if(recording)stop();return}requestAnimationFrame(loop)})()}
-let mr,chunks=[];
-function stop(){mr.stop()}
-function record(){if(recording)return;const mt=["video/mp4","video/webm;codecs=vp9","video/webm"].find(m=>MediaRecorder.isTypeSupported(m));
- mr=new MediaRecorder(cv.captureStream(30),{mimeType:mt,videoBitsPerSecond:6e6});chunks=[];mr.ondataavailable=e=>chunks.push(e.data);
- mr.onstop=()=>{recording=false;$("rec").textContent="⏺ Record video";const b=new Blob(chunks,{type:mt}),a=document.createElement("a");a.href=URL.createObjectURL(b);
-  a.download="reel_"+cur.id+(mt.includes("mp4")?".mp4":".webm");a.click()};recording=true;$("rec").textContent="Recording…";mr.start();run()}
-function list(){const l=$("list");l.innerHTML="";IDEAS.filter(i=>i.series==series).forEach(i=>{const b=document.createElement("button");b.textContent=i.title;b.onclick=()=>{playing=false;pick(i);[...l.children].forEach(c=>c.classList.remove("on"));b.classList.add("on")};l.appendChild(b)});l.firstChild.click()}
-$("tq").onclick=()=>{series="qa";$("tq").className="on";$("tm").className="";list()};
-$("tm").onclick=()=>{series="myth";$("tm").className="on";$("tq").className="";list()};
-$("play").onclick=()=>{if(!recording)run()};$("rec").onclick=record;
+ else if(i.template=="relay"){if(t<T.cap){const ch=[["The Prophet ﷺ",1],...(i.chain||[]).map(n=>[n,0]),["You",0]],N=ch.length,y0=330,y1=800,cx=130,ys=ch.map((_,k)=>y0+(y1-y0)*k/Math.max(1,N-1)),oy=y0+(y1-y0)*seg(t/T.cap,.05,.92);
+  line([[cx,y0],[cx,y1]],3,"#33333c");line([[cx,y0],[cx,oy]],5,GOLD);
+  ch.forEach((c,k)=>{const lit=oy>=ys[k]-2;x.beginPath();x.arc(cx,ys[k],c[1]?17:12,0,7);if(lit){x.fillStyle=GOLD;x.fill();x.font="27px "+LT;x.textAlign="left";x.fillStyle="#f0ece4";x.fillText(c[0],cx+34,ys[k]+9)}else{x.strokeStyle="#55555e";x.lineWidth=3;x.stroke()}});
+  x.textAlign="center";glow(cx,oy,60,GOLD,.7)}}
+ else{glow(450,G-90,40+240*seg(u,.1,.9),GOLD,.5);line([[450,G],[450,G-110]],4,"#6a6a72");fig(70+290*seg(u,0,.85),u<.85?u*40:0)}
+ if(i.noText)return;acc=0;T.b.forEach((b,k)=>{const a=fade(t,acc,acc+b.d,.5,.45),y=txt(b.t,W/2,120,36,LT,b.g?GOLD:"#f0ece4",a);if(i.urh&&i.urh[k])txt(i.urh[k],W/2,y+6,24,LT,"#b9b09a",a);acc+=b.d});
+ if(t>=T.cap&&t<T.cap+T.q){const e=T.cap+T.q;x.fillStyle="rgba(0,0,0,"+.66*fade(t,T.cap,e,.6,.5)+")";x.fillRect(0,0,W,H);
+  const na=wc(i.arabic),ne=wc(i.quote_en),as=na>30?28:na>18?34:42,es=ne>45?20:ne>28?24:29;let y=170;
+  if(i.arabic)y=txt(i.arabic,W/2,y,as,AR,GOLD,fade(t,T.cap+.3,e,.8,.5),480,1.6,true)+20;
+  const fa=fade(t,T.cap+(i.arabic?1.6:.3),e,.8,.5);y=txt("“"+i.quote_en+"”",W/2,y,es,LT,"#f0ece4",fa);if(i.ur)y=txt(i.ur,W/2,y+10,Math.min(es,22),LT,"#cfc6b0",fa);txt(i.ref,W/2,y+16,20,LT,GOLD,fade(t,T.cap+2.4,e,.8,.5))}
+ if(t>=T.cap+T.q)txt("Send this to someone who needs it.",W/2,390,32,LT,"#f0ece4",fade(t,T.cap+T.q,T.total+.5,.6,1));
+ if(i.channel)txt(i.channel,W/2,H-60,20,"system-ui",GOLD,.8);
+ if(!i.verified)txt("DRAFT · UNVERIFIED SOURCE",W/2,H-24,14,"monospace","#ff5a5a",.9)}
+const warn=()=>$("warn").textContent=(cur.verified?"":"⚠ Not marked verified — video will carry a DRAFT mark. ")+"Length: "+tl.total.toFixed(0)+"s"+(tl.total>60.5?" (over 60s — shorten text)":"");
+function redraw(){if(playing)return;cur=form();tl=timeline(cur);mkStars();warn();frame($("sl").value*tl.total)}
+function run(cb){const t0=performance.now();playing=true;(function loop(){const t=(performance.now()-t0)/1000;frame(Math.min(t,tl.total));if(t>=tl.total){playing=false;cb&&cb();return}requestAnimationFrame(loop)})()}
+const slug=s=>(s||"reel").toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_|_$/g,"").slice(0,40)||"reel";
+function save(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(a.href)},4000)}
+async function record(i){cur=i;tl=timeline(i);mkStars();warn();
+ const mt=["video/mp4","video/webm;codecs=vp9","video/webm"].find(m=>MediaRecorder.isTypeSupported(m));if(!mt){alert("Recording not supported in this browser");return}
+ const st=cv.captureStream(30);let ac;const f=$("mus").files[0];
+ if(f){try{ac=new AudioContext();await ac.resume();const buf=await ac.decodeAudioData(await f.arrayBuffer()),s=ac.createBufferSource(),gn=ac.createGain(),d=ac.createMediaStreamDestination();
+  s.buffer=buf;s.loop=true;gn.gain.value=.5;s.connect(gn);gn.connect(d);s.start();st.addTrack(d.stream.getAudioTracks()[0])}catch(e){console.warn("music failed",e)}}
+ await new Promise(res=>{const mr=new MediaRecorder(st,{mimeType:mt,videoBitsPerSecond:6e6}),ch=[];mr.ondataavailable=e=>e.data.size&&ch.push(e.data);
+  mr.onstop=()=>{ac&&ac.close();save(new Blob(ch,{type:mt}),slug(i.title)+(mt.includes("mp4")?".mp4":".webm"));res()};mr.start();run(()=>setTimeout(()=>mr.stop(),300))})}
+const postText=i=>`${i.ref}\n\n“${i.quote_en}”\n${i.arabic?"\n"+i.arabic+"\n":""}\n(Meaning translation — check the source.)\nSend this to someone who needs it.\n\n#sunnah #hadith #islam #shorts #reels`;
+function ql(){$("qn").textContent="("+Q.length+")";const l=$("ql");l.innerHTML="";Q.forEach((q,k)=>{const d=document.createElement("div");d.className="q";
+ d.innerHTML="<span></span><button>✎</button><button>✕</button>";d.firstChild.textContent=(q.verified?"✓ ":"· ")+q.title;
+ d.children[1].onclick=()=>{ed=k;fill(q);$("add").textContent="✔ Update #"+(k+1);scrollTo(0,0)};
+ d.children[2].onclick=()=>{Q.splice(k,1);persist();ql()};l.appendChild(d)})}
+$("f").addEventListener("input",()=>{playing=false;redraw()});$("sl").oninput=()=>{playing=false;redraw()};
+$("play").onclick=()=>{if(playing||busy)return;cur=form();tl=timeline(cur);mkStars();run()};
+$("rec").onclick=async()=>{if(busy)return;busy=true;$("rec").textContent="Recording…";await record(form());busy=false;$("rec").textContent="⏺ Record video"};
+$("add").onclick=()=>{const i=form();if(!i.arabic&&!i.quote_en){alert("Add the hadith first");return}if(ed>=0)Q[ed]=i;else Q.push(i);ed=-1;$("add").textContent="＋ Add to queue";persist();ql()};
+$("all").onclick=async()=>{if(busy||!Q.length)return;busy=true;for(let k=0;k<Q.length;k++){$("all").textContent=`Recording ${k+1}/${Q.length}…`;await record({...Q[k],channel:Q[k].channel||$("ch").value.trim()});await new Promise(r=>setTimeout(r,1500))}
+ $("all").textContent="⏺ Record ALL";busy=false;redraw()};
+$("cp").onclick=()=>{const t=postText(form());(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>alert("Copied"),()=>prompt("Copy:",t))};
+$("smp").onclick=()=>{if(typeof IDEAS=="undefined"){alert("data.js not found next to index.html");return}IDEAS.forEach(i=>Q.push({...i,verified:i.status=="verified",target:0}));persist();ql()};
+$("exp").onclick=()=>save(new Blob([JSON.stringify(Q,null,1)],{type:"application/json"}),"queue.json");
+$("imp").onclick=()=>$("impf").click();$("impf").onchange=async e=>{try{const a=JSON.parse(await e.target.files[0].text());(Array.isArray(a)?a:[a]).forEach(i=>Q.push({...i,verified:i.verified??i.status=="verified"}));persist();ql()}catch(x){alert("Bad JSON file")}};
+$("thb").onclick=()=>{playing=false;const i={...form(),noText:true};cur=i;tl=timeline(i);mkStars();frame(tl.cap*.95);
+ x.fillStyle="rgba(0,0,0,.45)";x.fillRect(0,0,W,H);x.save();x.shadowColor="#000";x.shadowBlur=18;txt((i.thumb||i.ref).toUpperCase(),W/2,250,78,LT,GOLD,1,480,1.1);x.restore();
+ if(i.channel)txt(i.channel,W/2,H-60,22,"system-ui",GOLD,.9);cv.toBlob(b=>{save(b,slug(i.title)+"_thumb.png");redraw()},"image/png")};
+$("bk").onclick=()=>{let n=0;$("bulk").value.split(/^\s*---\s*$/m).map(s=>s.trim()).filter(Boolean).forEach(b=>{const o={};
+ b.split("\n").forEach(l=>{const m=l.match(/^(AR|EN|REF|CAP|UR|URC|SCENE|VERDICT|THUMB|SEC|VERIFIED|CHAIN):\s*(.*)$/i);if(m)o[m[1].toUpperCase()]=m[2].trim()});if(!o.AR&&!o.EN)return;
+ Q.push({title:o.REF||"reel",lines:(o.CAP||"Do you know this hadith?|^Listen to it.").split("|").map(s=>s.trim()),quote_en:o.EN||"",arabic:o.AR||"",ref:o.REF||"",ur:o.UR||"",urh:(o.URC||"").split("|").map(s=>s.trim()),
+  chain:(o.CHAIN||"").split("|").map(s=>s.trim()).filter(Boolean),template:["ask","myth","relay","walk"].includes((o.SCENE||"").toLowerCase())?o.SCENE.toLowerCase():"walk",verdict:(o.VERDICT||"sahih").toLowerCase(),thumb:o.THUMB||"",verified:/^y/i.test(o.VERIFIED||""),target:+o.SEC||0});n++});
+ persist();ql();alert(n+" added")};
 if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
-list();
+ql();redraw();
 </script></body></html>

@@ -1,0 +1,37 @@
+[
+ {
+  "id": 301,
+  "series": "isnad",
+  "theme": "isnad",
+  "template": "relay",
+  "title": "Chain of Sahih al-Bukhari 12",
+  "lines": [
+   "How did this hadith reach you?",
+   "6 named people. One chain.",
+   "^Follow the light."
+  ],
+  "chain": [
+   "‘Abdullah ibn ‘Amr",
+   "Abu al-Khayr",
+   "Yazid",
+   "al-Layth",
+   "‘Amr ibn Khalid",
+   "al-Bukhari"
+  ],
+  "quote_en": "That you feed people, and greet those you know and those you do not know.",
+  "ref": "Sahih al-Bukhari 12 — chain as printed on the page",
+  "arabic": "تطعم الطعام وتقرأ السلام على من عرفت ومن لم تعرف",
+  "target": 40,
+  "status": "verified",
+  "shamela": {
+   "book_id": 735,
+   "page_id": 31,
+   "book": "صحيح البخاري - ت البغا",
+   "url": "https://shamela.ws/book/735/31",
+   "checked": "2026-10-31"
+  },
+  "translation_note": "Names exactly as printed in the sanad on Shamela page 31. Do NOT add full names/dates (e.g. which 'al-Layth') unless you verify them in a rijal book.",
+  "yt_title": "This Hadith Passed Through 6 Named People to Reach You",
+  "yt_thumb": "FOLLOW THE CHAIN"
+ }
+]

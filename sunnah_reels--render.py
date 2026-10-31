@@ -3,7 +3,7 @@ import os, subprocess, math
 import numpy as np
 from PIL import Image, ImageDraw
 from . import scenes as S
-from .text import font, wrap, shape_ar
+from .text import font, wrap, shape_ar, draw_mixed
 
 W, H = S.W, S.H
 GOLD, WHITE, DIM = (232, 190, 110), (240, 236, 228), (150, 140, 120)
@@ -36,7 +36,8 @@ def draw_text_block(layer, lines, fnt, y, color, alpha, arabic=False, lh=1.25, m
     col = (*color, int(255 * alpha))
     for ln in lines:
         s, kw = shape_ar(ln) if arabic else (ln, {})
-        d.text((W / 2, y), s, font=fnt, fill=col, anchor="ma", **kw)
+        if arabic: d.text((W / 2, y), s, font=fnt, fill=col, anchor="ma", **kw)
+        else: draw_mixed(d, (W / 2, y), s, fnt, col, "ma")
         y += int(fnt.size * lh)
     return y
 
@@ -45,7 +46,7 @@ class Renderer:
     def __init__(self, idea, fps=30, draft=False, target=None):
         self.idea, self.fps, self.draft = idea, fps, draft
         self.tl = build_timeline(idea, fps, target)
-        self.pal = dict(S.PALETTES[S.THEME_PALETTE.get(idea["theme"], "night")])
+        self.pal = dict(S.PALETTES[S.THEME_PALETTE.get(idea.get("theme"), "night")])
         self.stars = S.make_stars(idea["id"])
         self.tpl = S.TEMPLATES[idea["template"]]
         d = ImageDraw.Draw(Image.new("RGB", (1, 1)))
@@ -66,7 +67,7 @@ class Renderer:
         for k, b in enumerate(tl["beats"]):
             if t >= acc: beat_i = k
             acc += b["dur"]
-        c.idea = self.idea; self.tpl(c, u, beat_i, len(tl["beats"])); c.finish()
+        c.idea = self.idea; c.cap = cap; self.tpl(c, u, beat_i, len(tl["beats"])); c.finish()
         text = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         acc = 0
         for b in tl["beats"]:                                    # caption beats

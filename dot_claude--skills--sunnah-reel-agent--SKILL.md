@@ -15,6 +15,12 @@ The user gives ONLY the idea (a hadith, a question, a claim). You do the rest. W
 - **myth** ("Hadith ya Afwah?"): a popular saying is checked against the books.
 - If the idea is neither, add it as a plain idea (`data/ideas.json`) with an existing template.
 
+- **isnad** ("Chain" / How this reached you): a light travels down the named narrators to the viewer.
+  Names go in exactly as printed in the sanad on the Shamela page. Do not add full names, dates or gradings
+  unless you verified them in a rijal book. Example:
+  `python -m sunnah_reels new isnad --chain "‘Abdullah ibn ‘Amr;Abu al-Khayr;Yazid;al-Layth;‘Amr ibn Khalid;al-Bukhari" --quote "..." --ref "Sahih al-Bukhari 12" --arabic "..." --book-id 735 --page-id 31`
+- **Never draw the Prophet ﷺ (or any prophet / the Sahaba who are named) as a figure.** The answer/source is shown as a light.
+
 ## 2. Verify on Shamela BEFORE writing anything (never from memory)
 1. `shamela_resolve` the book (Bukhari / Muslim ids: look them up, do not assume).
 2. `shamela_verify_quote` the Arabic against that book. Verbatim or "differs only in tashkeel" = good.
