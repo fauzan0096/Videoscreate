@@ -1,0 +1,110 @@
+[
+ {
+  "id": 101,
+  "series": "qa",
+  "theme": "qa",
+  "template": "ask",
+  "title": "Most beloved deed",
+  "lines": [
+   "Ibn Mas‘ud asked the Prophet ﷺ:",
+   "“Which deed is most beloved to Allah?”",
+   "^Not what most people guess."
+  ],
+  "quote_en": "Prayer at its proper time. Then kindness to parents. Then striving in the way of Allah.",
+  "ref": "Sahih al-Bukhari 527",
+  "arabic": "الصلاة على وقتها ثم بر الوالدين ثم الجهاد في سبيل الله",
+  "status": "verified",
+  "translation_note": "Text verified on Shamela. Ibn Mas‘ud is the narrator (question about 'most beloved').",
+  "yt_title": "Ibn Mas‘ud Asked About the 3 Deeds Allah Loves Most",
+  "yt_thumb": "WHICH FIRST?",
+  "shamela": {
+   "book_id": 735,
+   "page_id": 884,
+   "book": "صحيح البخاري - ت البغا (no. 504 in this ed.)",
+   "url": "https://shamela.ws/book/735/884",
+   "checked": "2026-10-31"
+  },
+  "arabic_key": "الصلاة على وقتها ثم بر الوالدين ثم الجهاد في سبيل الله"
+ },
+ {
+  "id": 102,
+  "series": "qa",
+  "theme": "qa",
+  "template": "ask",
+  "title": "Who deserves my kindness",
+  "lines": [
+   "A man asked the Prophet ﷺ:",
+   "“Who has the most right to my good company?”",
+   "^The answer came three times."
+  ],
+  "quote_en": "Your mother. Then your mother. Then your mother. Then your father.",
+  "ref": "Sahih al-Bukhari 5971",
+  "arabic": "أمك ثم أمك ثم أمك ثم أبوك",
+  "status": "verified",
+  "translation_note": "Opening verified on Shamela (Abu Hurayrah); full sequence per Bukhari — read page once before posting. Narrator: Abu Hurayrah.",
+  "yt_title": "3 Times Mother. Who Did the Prophet ﷺ Name 4th?",
+  "yt_thumb": "THEN WHO?",
+  "shamela": {
+   "book_id": 735,
+   "page_id": 9032,
+   "book": "صحيح البخاري - ت البغا (no. 5626 in this ed.)",
+   "url": "https://shamela.ws/book/735/9032",
+   "checked": "2026-10-31"
+  },
+  "arabic_key": "أمك ثم أمك ثم أمك ثم أبوك"
+ },
+ {
+  "id": 103,
+  "series": "qa",
+  "theme": "qa",
+  "template": "ask",
+  "title": "One thing to hold on to",
+  "lines": [
+   "Sufyan ibn ‘Abdullah asked:",
+   "“Tell me one thing about Islam, so I need ask no one else.”",
+   "^One short answer."
+  ],
+  "quote_en": "Say: I believe in Allah — then be steadfast.",
+  "ref": "Sahih Muslim 38",
+  "arabic": "قل آمنت بالله فاستقم",
+  "status": "verified",
+  "translation_note": "Verified verbatim. Wording is 'fa-staqim' (so be steadfast) in Muslim.",
+  "yt_title": "1 Question, 1 Short Answer: Sufyan's Hadith",
+  "yt_thumb": "SAY THIS",
+  "shamela": {
+   "book_id": 1727,
+   "page_id": 124,
+   "book": "صحيح مسلم - ت عبد الباقي",
+   "url": "https://shamela.ws/book/1727/124",
+   "checked": "2026-10-31"
+  },
+  "arabic_key": "قل آمنت بالله فاستقم"
+ },
+ {
+  "id": 104,
+  "series": "qa",
+  "theme": "qa",
+  "template": "ask",
+  "title": "Best part of Islam",
+  "lines": [
+   "A man asked the Prophet ﷺ:",
+   "“Which part of Islam is best?”",
+   "^It costs almost nothing."
+  ],
+  "quote_en": "That you feed people, and greet those you know and those you do not know.",
+  "ref": "Sahih al-Bukhari 12",
+  "arabic": "تطعم الطعام وتقرأ السلام على من عرفت ومن لم تعرف",
+  "status": "verified",
+  "translation_note": "Verified verbatim. Narrated by ‘Abdullah ibn ‘Amr about a man who asked.",
+  "yt_title": "Feed People, Greet Everyone: The Prophet's ﷺ Answer",
+  "yt_thumb": "1 MEAL + SALAM",
+  "shamela": {
+   "book_id": 735,
+   "page_id": 31,
+   "book": "صحيح البخاري - ت البغا",
+   "url": "https://shamela.ws/book/735/31",
+   "checked": "2026-10-31"
+  },
+  "arabic_key": "تطعم الطعام وتقرأ السلام على من عرفت ومن لم تعرف"
+ }
+]

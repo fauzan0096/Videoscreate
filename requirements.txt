@@ -1,0 +1,5 @@
+pillow>=10
+numpy
+# only needed if your Pillow lacks libraqm:
+# arabic-reshaper
+# python-bidi

@@ -1,0 +1,118 @@
+[
+ {
+  "id": 201,
+  "series": "myth",
+  "theme": "myth",
+  "template": "myth",
+  "title": "Cleanliness is half of faith",
+  "lines": [
+   "Everyone says:",
+   "“Cleanliness is half of faith.”",
+   "Is it a real hadith?",
+   "^Yes — as “purity is half of faith”."
+  ],
+  "quote_en": "Purification is half of faith.",
+  "ref": "Sahih Muslim 223",
+  "arabic": "الطهور شطر الإيمان",
+  "status": "verified",
+  "translation_note": "Verified verbatim (narrated by Abu Malik al-Ash‘ari). Authentic wording is 'purification', not 'cleanliness'.",
+  "verdict": "sahih",
+  "yt_title": "Is 'Cleanliness Is Half of Faith' a Real Hadith?",
+  "yt_thumb": "CHECKED",
+  "shamela": {
+   "book_id": 1727,
+   "page_id": 482,
+   "book": "صحيح مسلم - ت عبد الباقي",
+   "url": "https://shamela.ws/book/1727/482",
+   "checked": "2026-10-31"
+  },
+  "arabic_key": "الطهور شطر الإيمان"
+ },
+ {
+  "id": 202,
+  "series": "myth",
+  "theme": "myth",
+  "template": "myth",
+  "title": "Seek knowledge even in China",
+  "lines": [
+   "Everyone says:",
+   "“Seek knowledge, even in China.”",
+   "Is it a real hadith?",
+   "^Al-Bayhaqi: famous text, weak chains."
+  ],
+  "quote_en": "Seek knowledge, even in China.",
+  "ref": "al-Bayhaqi, al-Madkhal (ed. ‘Awwama) 2/663: famous text, weak chains",
+  "arabic": "اطلبوا العلم ولو بالصين",
+  "status": "verified",
+  "translation_note": "Bayhaqi: 'its text is famous but its chains are weak'. Say 'weak chains', never 'fake'. The second half (seeking knowledge is obligatory) has other routes: do not claim it is baseless.",
+  "verdict": "weak",
+  "yt_title": "‘Seek Knowledge Even in China’: Real Hadith?",
+  "yt_thumb": "WEAK?",
+  "shamela": {
+   "book_id": 39268,
+   "page_id": 753,
+   "book": "المدخل إلى السنن الكبرى - البيهقي - ت عوامة",
+   "url": "https://shamela.ws/book/39268/753",
+   "checked": "2026-10-31"
+  },
+  "arabic_key": "اطلبوا العلم ولو بالصين"
+ },
+ {
+  "id": 203,
+  "series": "myth",
+  "theme": "myth",
+  "template": "myth",
+  "title": "Love of homeland is faith",
+  "lines": [
+   "Everyone says:",
+   "“Love of the homeland is part of faith.”",
+   "Is it a real hadith?",
+   "^Al-Saghani lists it among fabricated sayings."
+  ],
+  "quote_en": "Love of the homeland is part of faith.",
+  "ref": "al-Saghani, al-Mawdu‘at p.53 (listed among fabricated sayings)",
+  "arabic": "حب الوطن من الإيمان",
+  "status": "verified",
+  "translation_note": "Text found in al-Saghani's al-Mawdu‘at. Read the page header once to confirm the section before posting.",
+  "verdict": "weak",
+  "yt_title": "‘Love of Homeland Is Faith’: Real Hadith?",
+  "yt_thumb": "WHO GRADED IT?",
+  "shamela": {
+   "book_id": 6070,
+   "page_id": 31,
+   "book": "الموضوعات للصغاني",
+   "url": "https://shamela.ws/book/6070/31",
+   "checked": "2026-10-31"
+  },
+  "arabic_key": "حب الوطن من الإيمان"
+ },
+ {
+  "id": 204,
+  "series": "myth",
+  "theme": "myth",
+  "template": "myth",
+  "title": "Paradise at mothers' feet",
+  "lines": [
+   "Everyone says:",
+   "“Paradise lies at the feet of mothers.”",
+   "Is it a real hadith?",
+   "^The authentic text is about staying with her."
+  ],
+  "quote_en": "Stay with her, for Paradise is beneath her feet.",
+  "ref": "Sunan an-Nasa’i (Jihad) — al-Albani: hasan sahih",
+  "arabic": "فالزمها فإن الجنة تحت رجليها",
+  "status": "verified",
+  "translation_note": "Said to Jahimah who asked about jihad. Grading from al-Albani in Sahih Sunan an-Nasa’i p.2/651.",
+  "verdict": "hasan",
+  "yt_title": "‘Paradise Is at Mothers’ Feet’: The Real Wording",
+  "yt_thumb": "WORDS CHANGED",
+  "shamela": {
+   "book_id": 1147,
+   "page_id": 659,
+   "book": "صحيح سنن النسائي - الألباني",
+   "url": "https://shamela.ws/book/1147/659",
+   "checked": "2026-10-31"
+  },
+  "arabic_key": "فالزمها فإن الجنة تحت رجليها"
+ }
+]

@@ -1,0 +1,76 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sunnah Reels Studio</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#05060c">
+<style>
+:root{--bg:#05060c;--fg:#f0ece4;--gold:#e8be6e;--card:#12141f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px system-ui,sans-serif;padding:env(safe-area-inset-top) 12px env(safe-area-inset-bottom);text-align:center}
+h1{font-size:18px;color:var(--gold);margin:12px 0 8px}
+.tabs,.list{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0}
+button,select{background:var(--card);color:var(--fg);border:1px solid #333;border-radius:10px;padding:10px 14px;font-size:15px}
+button.on{border-color:var(--gold);color:var(--gold)}
+canvas{width:min(100%,calc((100vh - 230px)*.5625));aspect-ratio:9/16;background:#000;border-radius:12px;display:block;margin:10px auto}
+.warn{color:#ff7b7b;font-size:13px;min-height:18px}input{background:var(--card);color:var(--fg);border:1px solid #333;border-radius:10px;padding:8px;width:160px}
+</style></head><body>
+<h1>☪ Sunnah Reels Studio</h1>
+<div class="tabs"><button id="tq" class="on">Sahaba ne poocha</button><button id="tm">Hadith ya Afwah?</button></div>
+<div class="list" id="list"></div>
+<canvas id="cv" width="540" height="960"></canvas>
+<div class="warn" id="warn"></div>
+<div class="list"><button id="play">▶ Preview</button><button id="rec">⏺ Record video</button><input id="ch" placeholder="@channel name"></div>
+<script src="data.js"></script>
+<script>
+const W=540,H=960,G=640,cv=document.getElementById("cv"),x=cv.getContext("2d");
+const GOLD="#e8be6e",$=id=>document.getElementById(id);
+let series="qa",cur=null,t0=0,playing=false,recording=false,tl=null,stars=[];
+const dur=l=>Math.max(2.6,.38*l.replace(/^\^/,"").split(/\s+/).length+1);
+function timeline(i){const b=i.lines.map(l=>({t:l.replace(/^\^/,""),g:l[0]=="^",d:dur(l)}));
+ const cap=b.reduce((a,v)=>a+v.d,0),q=3+.42*i.quote_en.split(/\s+/).length+1.5;return{b,cap,q,total:cap+q+2.6}}
+const ease=v=>v*v*(3-2*v),cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(u,a,b)=>ease(cl((u-a)/(b-a))),
+ fade=(t,a,b,fi=.5,fo=.5)=>cl(Math.min((t-a)/fi,(b-t)/fo,1));
+function mkStars(){let s=7;const r=()=>(s=(s*9301+49297)%233280)/233280;stars=[...Array(70)].map(()=>[r()*W,r()*G*.8,r()*1.4+.4,r()*6])}
+function line(p,w,c){x.strokeStyle=c;x.lineWidth=w;x.lineCap="round";x.lineJoin="round";x.beginPath();p.forEach((q,k)=>k?x.lineTo(q[0],q[1]):x.moveTo(q[0],q[1]));x.stroke()}
+function fig(px,ph,col="#8a8a92",flip=false,reach=false){const f=flip?-1:1,s=Math.sin(ph),X=(a)=>px+a*f*.7,Y=(a)=>G+a*.7;
+ line([[X(0),Y(-70)],[X(0),Y(-140)]],7,col);line([[X(0),Y(-70)],[X(-6+13*s),Y(-36)],[X(-9+26*s),Y(0)]],7,col);
+ line([[X(0),Y(-70)],[X(6-13*s),Y(-36)],[X(9-26*s),Y(0)]],7,col);
+ line([[X(0),Y(-140)],reach?[X(52),Y(-128)]:[X(-10-22*s),Y(-85)]],7,col);x.fillStyle=col;x.beginPath();x.arc(X(0),Y(-162),13,0,7);x.fill()}
+function glow(cx,cy,r,col,a){const g=x.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,col);g.addColorStop(1,"transparent");x.globalAlpha=a;x.fillStyle=g;x.fillRect(cx-r,cy-r,2*r,2*r);x.globalAlpha=1}
+function txt(s,px,py,font,col,a,maxw=470,lh=1.3,rtl=false){if(a<=0)return py;x.globalAlpha=a;x.font=font;x.fillStyle=col;x.textAlign="center";x.direction=rtl?"rtl":"ltr";
+ const sz=parseInt(font.match(/(\d+)px/)[1]);let cur="";const lines=[];s.split(" ").forEach(w=>{const t=(cur+" "+w).trim();if(x.measureText(t).width<=maxw||!cur)cur=t;else{lines.push(cur);cur=w}});lines.push(cur);
+ lines.forEach(l=>{x.fillText(l,px,py);py+=sz*lh});x.globalAlpha=1;return py}
+function frame(t){const i=cur,T=tl,u=cl(t/(T.cap+T.q));
+ const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,"#070914");g.addColorStop(1,"#03040a");x.fillStyle=g;x.fillRect(0,0,W,H);
+ stars.forEach(s=>{x.globalAlpha=.4+.4*Math.sin(t*1.5+s[3]);x.fillStyle="#fff";x.fillRect(s[0],s[1],s[2],s[2])});x.globalAlpha=1;
+ let bi=0,acc=0;T.b.forEach((b,k)=>{if(t>=acc)bi=k;acc+=b.d});const n=T.b.length;
+ x.fillStyle="#12131c";x.fillRect(0,G,W,2);
+ if(i.template=="ask"){const ax=90+210*seg(u,0,.22)*.9;fig(ax,u<.22?u*60:0);fig(360,0,"#ffe8b8",true);
+  if(bi>=1){x.font="48px serif";x.fillStyle=GOLD;x.textAlign="center";x.fillText("?",ax,G-175-5*Math.sin(t*4))}
+  if(bi>=n-1)glow(360,G-90,170+15*Math.sin(t*3),GOLD,.45)}
+ else{fig(100,0,"#8a8a92",false,true);x.fillStyle="#4a3a28";x.strokeStyle=GOLD;x.lineWidth=3;x.fillRect(175,290,210,225);x.strokeRect(175,290,210,225);
+  for(let k=0;k<5;k++)line([[198,325+k*37],[362,325+k*37]],2,"#78644a");
+  const v=i.verdict||"sahih",col=v=="weak"?"#cd463c":v=="hasan"?GOLD:"#46aa64";
+  if(bi<n-1){x.font="54px serif";x.fillStyle=GOLD;x.fillText("?",280,255-4*Math.sin(t*4))}
+  else{const r=52*(1+.1*Math.sin(t*4));x.beginPath();x.arc(280,400,r,0,7);x.strokeStyle=col;x.lineWidth=8;x.stroke();
+   if(v=="weak"){line([[255,375],[305,425]],9,col);line([[305,375],[255,425]],9,col)}else line([[252,402],[272,424],[310,378]],9,col);glow(280,400,170,col,.25)}}
+ acc=0;T.b.forEach(b=>{const a=fade(t,acc,acc+b.d,.5,.45);txt(b.t,W/2,120,"40px Georgia,serif",b.g?GOLD:"#f0ece4",a);acc+=b.d});
+ if(t>=T.cap&&t<T.cap+T.q){x.fillStyle="rgba(0,0,0,"+.66*fade(t,T.cap,T.cap+T.q,.6,.5)+")";x.fillRect(0,0,W,H);
+  const e=T.cap+T.q;let y=170;if(i.arabic)y=txt(i.arabic,W/2,y,"42px 'Amiri',serif",GOLD,fade(t,T.cap+.3,e,.8,.5),470,1.6,true)+20;
+  y=txt("“"+i.quote_en+"”",W/2,y,"29px Georgia,serif","#f0ece4",fade(t,T.cap+(i.arabic?1.6:.3),e,.8,.5));txt(i.ref,W/2,y+16,"20px Georgia,serif",GOLD,fade(t,T.cap+2.4,e,.8,.5))}
+ if(t>=T.cap+T.q)txt("Send this to someone who needs it.",W/2,390,"34px Georgia,serif","#f0ece4",fade(t,T.cap+T.q,T.total+.5,.6,1));
+ const ch=$("ch").value.trim();if(ch)txt(ch,W/2,H-60,"20px system-ui",GOLD,.8);
+ if(i.status!="verified")txt("DRAFT · UNVERIFIED SOURCE",W/2,H-24,"14px monospace","#ff5a5a",.9)}
+function pick(i){cur=i;tl=timeline(i);mkStars();$("warn").textContent=i.status!="verified"?"⚠ Source not verified on Shamela — draft only. Verify before posting.":"";frame(0)}
+function run(){t0=performance.now();playing=true;(function loop(){if(!playing)return;const t=(performance.now()-t0)/1000;frame(Math.min(t,tl.total));
+ if(t>=tl.total){playing=false;if(recording)stop();return}requestAnimationFrame(loop)})()}
+let mr,chunks=[];
+function stop(){mr.stop()}
+function record(){if(recording)return;const mt=["video/mp4","video/webm;codecs=vp9","video/webm"].find(m=>MediaRecorder.isTypeSupported(m));
+ mr=new MediaRecorder(cv.captureStream(30),{mimeType:mt,videoBitsPerSecond:6e6});chunks=[];mr.ondataavailable=e=>chunks.push(e.data);
+ mr.onstop=()=>{recording=false;$("rec").textContent="⏺ Record video";const b=new Blob(chunks,{type:mt}),a=document.createElement("a");a.href=URL.createObjectURL(b);
+  a.download="reel_"+cur.id+(mt.includes("mp4")?".mp4":".webm");a.click()};recording=true;$("rec").textContent="Recording…";mr.start();run()}
+function list(){const l=$("list");l.innerHTML="";IDEAS.filter(i=>i.series==series).forEach(i=>{const b=document.createElement("button");b.textContent=i.title;b.onclick=()=>{playing=false;pick(i);[...l.children].forEach(c=>c.classList.remove("on"));b.classList.add("on")};l.appendChild(b)});l.firstChild.click()}
+$("tq").onclick=()=>{series="qa";$("tq").className="on";$("tm").className="";list()};
+$("tm").onclick=()=>{series="myth";$("tm").className="on";$("tq").className="";list()};
+$("play").onclick=()=>{if(!recording)run()};$("rec").onclick=record;
+if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+list();
+</script></body></html>

@@ -1,0 +1,1958 @@
+[
+ {
+  "id": 1,
+  "day": 1,
+  "theme": "manners",
+  "template": "meet",
+  "title": "Spread salam",
+  "lines": [
+   "Want something that makes hearts love each other?",
+   "It costs nothing.",
+   "^Spread the greeting of peace."
+  ],
+  "quote_en": "Shall I tell you something that, if you do it, you will love one another? Spread salam among yourselves.",
+  "ref": "Sahih Muslim 54",
+  "arabic": "أولا أدلكم على شيء إذا فعلتموه تحاببتم؟ أفشوا السلام بينكم",
+  "arabic_key": "أولا أدلكم على شيء إذا فعلتموه تحاببتم أفشوا السلام بينكم",
+  "status": "verified",
+  "shamela": {
+   "book_id": 1727,
+   "page_id": 158,
+   "printed_page": "1/ 74",
+   "edition_no": "93 (54)",
+   "book": "صحيح مسلم - ت عبد الباقي",
+   "url": "https://shamela.ws/book/1727/158",
+   "checked": "2026-10-30"
+  },
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 2,
+  "day": 2,
+  "theme": "manners",
+  "template": "meet",
+  "title": "Your smile is charity",
+  "lines": [
+   "No money in your pocket?",
+   "You still have something to give.",
+   "^Your smile counts as charity."
+  ],
+  "quote_en": "Your smiling in the face of your brother is charity for you.",
+  "ref": "Jami‘ at-Tirmidhi 1956",
+  "arabic": "تبسمك في وجه أخيك لك صدقة",
+  "arabic_key": "تبسمك في وجه أخيك لك صدقة",
+  "status": "verified",
+  "shamela": {
+   "book_id": 1435,
+   "page_id": 3384,
+   "printed_page": "4/ 339",
+   "edition_no": "1956",
+   "book": "سنن الترمذي - ت شاكر",
+   "url": "https://shamela.ws/book/1435/3384",
+   "checked": "2026-10-30"
+  },
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 3,
+  "day": 3,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "The forgotten siwak",
+  "lines": [
+   "Before every prayer, there is a sunnah we barely see anymore.",
+   "He said he would have commanded it, if not for the hardship.",
+   "^The siwak."
+  ],
+  "quote_en": "Were it not that I would burden my ummah, or the people, I would command them to use the siwak with every prayer.",
+  "ref": "Sahih al-Bukhari 887",
+  "arabic": "لَوْلَا أَنْ أَشُقَّ عَلَى أُمَّتِي، أَوْ عَلَى النَّاسِ لَأَمَرْتُهُمْ بِالسِّوَاكِ مَعَ كُلِّ صَلَاةٍ",
+  "arabic_key": "لولا أن أشق على أمتي أو على الناس لأمرتهم بالسواك مع كل صلاة",
+  "status": "verified",
+  "shamela": {
+   "book_id": 735,
+   "page_id": 1441,
+   "printed_page": "1/ 303",
+   "edition_no": "847",
+   "book": "صحيح البخاري - ت البغا",
+   "url": "https://shamela.ws/book/735/1441",
+   "checked": "2026-10-30"
+  },
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 4,
+  "day": 4,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "Two rak‘ahs of Duha",
+  "lines": [
+   "Every morning, charity is due on every part of you.",
+   "Most of us never think about it.",
+   "^Two rak‘ahs of Duha are enough."
+  ],
+  "quote_en": "Two rak‘ahs that he prays in the forenoon suffice for all of that.",
+  "ref": "Sahih Muslim 720",
+  "arabic": "ويجزئ من ذلك ركعتان يركعهما من الضحى",
+  "arabic_key": "ويجزئ من ذلك ركعتان يركعهما من الضحى",
+  "status": "verified",
+  "shamela": {
+   "book_id": 1727,
+   "page_id": 1604,
+   "printed_page": "1/ 498",
+   "edition_no": "84 (720)",
+   "book": "صحيح مسلم - ت عبد الباقي",
+   "url": "https://shamela.ws/book/1727/1604",
+   "checked": "2026-10-30"
+  },
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 5,
+  "day": 5,
+  "theme": "food",
+  "template": "meal",
+  "title": "Bismillah and the right hand",
+  "lines": [
+   "A boy’s hand wandered all over the plate.",
+   "The Prophet ﷺ didn’t shout.",
+   "^He taught him three things."
+  ],
+  "quote_en": "Boy, say Bismillah, eat with your right hand, and eat from what is in front of you.",
+  "ref": "Sahih al-Bukhari 5376",
+  "arabic": "يا غلام سم الله وكل بيمينك وكل مما يليك",
+  "arabic_key": "يا غلام سم الله وكل بيمينك وكل مما يليك",
+  "status": "verified",
+  "shamela": {
+   "book_id": 735,
+   "page_id": 8125,
+   "printed_page": "5/ 2056",
+   "edition_no": "5061",
+   "book": "صحيح البخاري - ت البغا",
+   "url": "https://shamela.ws/book/735/8125",
+   "checked": "2026-10-30"
+  },
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 6,
+  "day": 6,
+  "theme": "family",
+  "template": "home",
+  "title": "He served his family",
+  "lines": [
+   "Aisha was asked: what did he do at home?",
+   "He was busy serving his family.",
+   "^Then the prayer was called, and he went out."
+  ],
+  "quote_en": "He used to be in the service of his family, and when the prayer came, he would go out to pray.",
+  "ref": "Sahih al-Bukhari 676",
+  "arabic": "كَانَ يَكُونُ فِي مِهْنَةِ أَهْلِهِ، فَإِذَا حَضَرَتِ الصَّلَاةُ خَرَجَ إِلَى الصَّلَاةِ",
+  "arabic_key": "كان يكون في مهنة أهله فإذا حضرت الصلاة خرج إلى الصلاة",
+  "status": "verified",
+  "shamela": {
+   "book_id": 735,
+   "page_id": 1109,
+   "printed_page": "1/ 239",
+   "edition_no": null,
+   "book": "صحيح البخاري - ت البغا",
+   "url": "https://shamela.ws/book/735/1109",
+   "checked": "2026-10-30"
+  },
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 7,
+  "day": 7,
+  "theme": "manners",
+  "template": "meet",
+  "title": "Never belittle a good deed",
+  "lines": [
+   "You think it’s too small to matter.",
+   "He said: do not look down on any good.",
+   "^Even meeting your brother with a cheerful face."
+  ],
+  "quote_en": "Do not belittle any good, even meeting your brother with a cheerful face.",
+  "ref": "Sahih Muslim 2626",
+  "arabic": "لا تحقرن من المعروف شيئا، ولو أن تلقى أخاك بوجه طلق",
+  "arabic_key": "لا تحقرن من المعروف شيئا ولو أن تلقى أخاك بوجه طلق",
+  "status": "verified",
+  "shamela": {
+   "book_id": 1727,
+   "page_id": 6626,
+   "printed_page": "4/ 2026",
+   "edition_no": "144 (2626)",
+   "book": "صحيح مسلم - ت عبد الباقي",
+   "url": "https://shamela.ws/book/1727/6626",
+   "checked": "2026-10-30"
+  },
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 8,
+  "day": 8,
+  "theme": "community",
+  "template": "home",
+  "title": "Visit the sick",
+  "lines": [
+   "Someone you know is in bed today.",
+   "Nobody has called.",
+   "^Those who visit are in the harvest of Paradise."
+  ],
+  "quote_en": "Whoever visits a sick person remains in the fruit-gathering of Paradise until he returns.",
+  "ref": "Sahih Muslim 2568",
+  "arabic": null,
+  "arabic_key": "من عاد مريضا لم يزل في خرفة الجنة حتى يرجع",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 9,
+  "day": 9,
+  "theme": "community",
+  "template": "give",
+  "title": "Give a gift",
+  "lines": [
+   "A small gift. A big effect.",
+   "It softens what grudges harden.",
+   "^Give gifts, and you will love each other."
+  ],
+  "quote_en": "Give gifts to one another and you will love one another.",
+  "ref": "al-Adab al-Mufrad 594",
+  "arabic": null,
+  "arabic_key": "تهادوا تحابوا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 10,
+  "day": 10,
+  "theme": "community",
+  "template": "home",
+  "title": "Your neighbour’s right",
+  "lines": [
+   "Jibril kept advising him about the neighbour.",
+   "Again. And again.",
+   "^Until he thought the neighbour would inherit."
+  ],
+  "quote_en": "Jibril kept advising me about the neighbour until I thought he would make him an heir.",
+  "ref": "Sahih al-Bukhari 6014",
+  "arabic": null,
+  "arabic_key": "ما زال جبريل يوصيني بالجار حتى ظننت أنه سيورثه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 11,
+  "day": 11,
+  "theme": "community",
+  "template": "give",
+  "title": "Feed and greet",
+  "lines": [
+   "Someone asked: which Islam is best?",
+   "The answer had two parts.",
+   "^Feed people, and greet those you know and don’t know."
+  ],
+  "quote_en": "That you feed people and give salam to those you know and those you do not know.",
+  "ref": "Sahih al-Bukhari 12",
+  "arabic": null,
+  "arabic_key": "تطعم الطعام وتقرأ السلام على من عرفت ومن لم تعرف",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 12,
+  "day": 12,
+  "theme": "community",
+  "template": "walk_light",
+  "title": "Remove harm from the road",
+  "lines": [
+   "One small act on your walk today.",
+   "A stone. A peel. A branch.",
+   "^It is a branch of faith."
+  ],
+  "quote_en": "The lowest of them is removing harm from the road.",
+  "ref": "Sahih Muslim 35",
+  "arabic": null,
+  "arabic_key": "فأفضلها قول لا إله إلا الله وأدناها إماطة الأذى عن الطريق",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 13,
+  "day": 13,
+  "theme": "fasting",
+  "template": "walk_light",
+  "title": "Monday and Thursday",
+  "lines": [
+   "Deeds are presented to Allah twice a week.",
+   "He wanted his to arrive in a certain state.",
+   "^Fasting."
+  ],
+  "quote_en": "Deeds are presented on Monday and Thursday, and I love that my deeds be presented while I am fasting.",
+  "ref": "Jami‘ at-Tirmidhi 747",
+  "arabic": null,
+  "arabic_key": "تعرض الأعمال يوم الاثنين والخميس فأحب أن يعرض عملي وأنا صائم",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 14,
+  "day": 14,
+  "theme": "fasting",
+  "template": "walk_light",
+  "title": "Three days every month",
+  "lines": [
+   "A reward like fasting forever.",
+   "Without fasting forever.",
+   "^Three days a month."
+  ],
+  "quote_en": "Fasting three days of every month is like fasting all the time.",
+  "ref": "Sahih al-Bukhari 1979",
+  "arabic": null,
+  "arabic_key": "صيام ثلاثة أيام من كل شهر صيام الدهر كله",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 15,
+  "day": 15,
+  "theme": "fasting",
+  "template": "walk_light",
+  "title": "Six days of Shawwal",
+  "lines": [
+   "Ramadan ended. The door didn’t.",
+   "Six more days.",
+   "^And it is like a year of fasting."
+  ],
+  "quote_en": "Whoever fasts Ramadan and follows it with six days of Shawwal, it is like fasting the whole year.",
+  "ref": "Sahih Muslim 1164",
+  "arabic": null,
+  "arabic_key": "من صام رمضان ثم أتبعه ستا من شوال كان كصيام الدهر",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 16,
+  "day": 16,
+  "theme": "sleep",
+  "template": "sleep",
+  "title": "Sleep like the Prophet ﷺ",
+  "lines": [
+   "Your last moments before sleep matter.",
+   "Wudu. Right side. A prayer.",
+   "^End the day the way he did."
+  ],
+  "quote_en": "When you go to your bed, perform wudu as for prayer, then lie on your right side.",
+  "ref": "Sahih al-Bukhari 6311",
+  "arabic": null,
+  "arabic_key": "إذا أتيت مضجعك فتوضأ وضوءك للصلاة ثم اضطجع على شقك الأيمن",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 17,
+  "day": 17,
+  "theme": "sleep",
+  "template": "sleep",
+  "title": "A guardian through the night",
+  "lines": [
+   "He caught the thief of the food.",
+   "The thief taught him something.",
+   "^Recite Ayat al-Kursi before sleep."
+  ],
+  "quote_en": "Recite Ayat al-Kursi when you go to your bed; a guardian from Allah will remain with you.",
+  "ref": "Sahih al-Bukhari 2311",
+  "arabic": null,
+  "arabic_key": "إذا أويت إلى فراشك فاقرأ آية الكرسي لن يزال عليك من الله حافظ",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 18,
+  "day": 18,
+  "theme": "sleep",
+  "template": "sleep",
+  "title": "Two verses that suffice",
+  "lines": [
+   "Two verses. Thirty seconds.",
+   "Every night.",
+   "^The end of Surah al-Baqarah."
+  ],
+  "quote_en": "Whoever recites the last two verses of Surah al-Baqarah at night, they will suffice him.",
+  "ref": "Sahih al-Bukhari 5009",
+  "arabic": null,
+  "arabic_key": "من قرأ بالآيتين من آخر سورة البقرة في ليلة كفتاه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 19,
+  "day": 19,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "The last third of the night",
+  "lines": [
+   "The world is asleep.",
+   "A call is going out.",
+   "^Is there anyone asking? Anyone seeking forgiveness?"
+  ],
+  "quote_en": "Our Lord descends each night to the lowest heaven when the last third of the night remains.",
+  "ref": "Sahih al-Bukhari 1145",
+  "arabic": null,
+  "arabic_key": "ينزل ربنا تبارك وتعالى كل ليلة إلى السماء الدنيا حين يبقى ثلث الليل الآخر",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 20,
+  "day": 20,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "The two rak‘ahs of Fajr",
+  "lines": [
+   "Better than everything you own.",
+   "Better than the whole world.",
+   "^Two short rak‘ahs."
+  ],
+  "quote_en": "The two rak‘ahs of Fajr are better than the world and all it contains.",
+  "ref": "Sahih Muslim 725",
+  "arabic": null,
+  "arabic_key": "ركعتا الفجر خير من الدنيا وما فيها",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 21,
+  "day": 21,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "Twelve rak‘ahs, one house",
+  "lines": [
+   "Twelve rak‘ahs a day.",
+   "Besides the obligatory prayers.",
+   "^A house is built for you in Paradise."
+  ],
+  "quote_en": "Whoever prays twelve rak‘ahs in a day and night, a house will be built for him in Paradise.",
+  "ref": "Sahih Muslim 728",
+  "arabic": null,
+  "arabic_key": "ما من عبد مسلم يصلي لله كل يوم ثنتي عشرة ركعة تطوعا غير فريضة إلا بنى الله له بيتا في الجنة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 22,
+  "day": 22,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "Greet the masjid",
+  "lines": [
+   "You walked in and sat down.",
+   "He taught us not to.",
+   "^Pray two rak‘ahs first."
+  ],
+  "quote_en": "When one of you enters the masjid, he should not sit until he prays two rak‘ahs.",
+  "ref": "Sahih al-Bukhari 444",
+  "arabic": null,
+  "arabic_key": "إذا دخل أحدكم المسجد فلا يجلس حتى يصلي ركعتين",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 23,
+  "day": 23,
+  "theme": "prayer",
+  "template": "walk_light",
+  "title": "Wudu at home, then walk",
+  "lines": [
+   "Every step has a meaning.",
+   "One erases a mistake.",
+   "^The next raises you a rank."
+  ],
+  "quote_en": "One step erases a sin and the other raises a rank.",
+  "ref": "Sahih Muslim 666",
+  "arabic": null,
+  "arabic_key": "من تطهر في بيته ثم مشى إلى بيت من بيوت الله ليقضي فريضة من فرائض الله كانت خطواته إحداها تحط خطيئة والأخرى ترفع درجة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 24,
+  "day": 24,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "If they only knew",
+  "lines": [
+   "He said: if people knew what is in the adhan and the first row.",
+   "They would draw lots for it.",
+   "^And we argue about the back."
+  ],
+  "quote_en": "If people knew what is in the call to prayer and the first row, they would have to draw lots for it.",
+  "ref": "Sahih al-Bukhari 615",
+  "arabic": null,
+  "arabic_key": "لو يعلم الناس ما في النداء والصف الأول ثم لم يجدوا إلا أن يستهموا عليه لاستهموا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 25,
+  "day": 25,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "Dua between adhan and iqamah",
+  "lines": [
+   "A door that doesn’t close.",
+   "Between two calls.",
+   "^Ask."
+  ],
+  "quote_en": "A supplication made between the adhan and the iqamah is not rejected.",
+  "ref": "Jami‘ at-Tirmidhi 212",
+  "arabic": null,
+  "arabic_key": "الدعاء لا يرد بين الأذان والإقامة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 26,
+  "day": 26,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "Answer the caller",
+  "lines": [
+   "The adhan is called.",
+   "Stop. Listen.",
+   "^Say what he says."
+  ],
+  "quote_en": "When you hear the call, say what the muadhdhin says.",
+  "ref": "Sahih al-Bukhari 611",
+  "arabic": null,
+  "arabic_key": "إذا سمعتم النداء فقولوا مثل ما يقول المؤذن",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 27,
+  "day": 27,
+  "theme": "dhikr",
+  "template": "counter",
+  "title": "After every prayer",
+  "lines": [
+   "Thirty-three. Thirty-three. Thirty-three.",
+   "Takes one minute.",
+   "^Don’t rush out of the prayer."
+  ],
+  "quote_en": "Whoever glorifies Allah thirty-three times after every prayer, praises Him thirty-three, and magnifies Him thirty-three...",
+  "ref": "Sahih Muslim 597",
+  "arabic": null,
+  "arabic_key": "من سبح الله في دبر كل صلاة ثلاثا وثلاثين وحمد الله ثلاثا وثلاثين وكبر الله ثلاثا وثلاثين",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 28,
+  "day": 28,
+  "theme": "dhikr",
+  "template": "counter",
+  "title": "Salawat",
+  "lines": [
+   "One salawat.",
+   "Ten returned.",
+   "^Never be stingy with it."
+  ],
+  "quote_en": "Whoever sends one salawat upon me, Allah sends ten upon him.",
+  "ref": "Sahih Muslim 408",
+  "arabic": null,
+  "arabic_key": "من صلى علي صلاة صلى الله عليه بها عشرا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 29,
+  "day": 29,
+  "theme": "dhikr",
+  "template": "counter",
+  "title": "A hundred a day",
+  "lines": [
+   "Subhanallahi wa bihamdihi.",
+   "A hundred times.",
+   "^Sins fall like sea foam."
+  ],
+  "quote_en": "Whoever says it a hundred times a day, his sins are forgiven even if they are like the foam of the sea.",
+  "ref": "Sahih al-Bukhari 6405",
+  "arabic": null,
+  "arabic_key": "من قال سبحان الله وبحمده في يوم مائة مرة حطت خطاياه وإن كانت مثل زبد البحر",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 30,
+  "day": 30,
+  "theme": "dhikr",
+  "template": "counter",
+  "title": "Light on the tongue",
+  "lines": [
+   "Two words. Light to say.",
+   "Heavy on the scale.",
+   "^Subhanallahi wa bihamdihi, Subhanallahil ‘Azim."
+  ],
+  "quote_en": "Two words, light on the tongue, heavy on the scale, beloved to the Most Merciful.",
+  "ref": "Sahih al-Bukhari 6406",
+  "arabic": null,
+  "arabic_key": "كلمتان خفيفتان على اللسان ثقيلتان في الميزان حبيبتان إلى الرحمن",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 31,
+  "day": 31,
+  "theme": "dhikr",
+  "template": "counter",
+  "title": "He sought forgiveness daily",
+  "lines": [
+   "He was forgiven already.",
+   "And still.",
+   "^More than seventy times a day."
+  ],
+  "quote_en": "By Allah, I seek Allah’s forgiveness and repent to Him more than seventy times a day.",
+  "ref": "Sahih al-Bukhari 6307",
+  "arabic": null,
+  "arabic_key": "والله إني لأستغفر الله وأتوب إليه في اليوم أكثر من سبعين مرة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 32,
+  "day": 32,
+  "theme": "dhikr",
+  "template": "give",
+  "title": "Dua in their absence",
+  "lines": [
+   "Ask for your brother when he can’t hear you.",
+   "An angel is listening.",
+   "^And says: and for you the same."
+  ],
+  "quote_en": "The supplication of a Muslim for his brother in his absence is answered.",
+  "ref": "Sahih Muslim 2733",
+  "arabic": null,
+  "arabic_key": "دعوة المرء المسلم لأخيه بظهر الغيب مستجابة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 33,
+  "day": 33,
+  "theme": "home",
+  "template": "home",
+  "title": "Say Bismillah at the door",
+  "lines": [
+   "When you enter your home.",
+   "Mention Allah.",
+   "^Shaytan has nowhere to stay tonight."
+  ],
+  "quote_en": "When a man enters his house and mentions Allah, Shaytan says: no lodging and no dinner for you.",
+  "ref": "Sahih Muslim 2018",
+  "arabic": null,
+  "arabic_key": "إذا دخل الرجل بيته فذكر الله عند دخوله وعند طعامه قال الشيطان لا مبيت لكم ولا عشاء",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 34,
+  "day": 34,
+  "theme": "home",
+  "template": "home",
+  "title": "Greet your own family",
+  "lines": [
+   "We greet strangers.",
+   "And walk past our own.",
+   "^Say salam when you enter home."
+  ],
+  "quote_en": "When you enter upon your family, give salam; it will be a blessing upon you and your household.",
+  "ref": "Jami‘ at-Tirmidhi 2698",
+  "arabic": null,
+  "arabic_key": "إذا دخلت على أهلك فسلم يكون بركة عليك وعلى أهل بيتك",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 35,
+  "day": 35,
+  "theme": "family",
+  "template": "meet",
+  "title": "Greet the children",
+  "lines": [
+   "He passed by some children.",
+   "He greeted them.",
+   "^Because that was what the Prophet ﷺ did."
+  ],
+  "quote_en": "He passed by some children and greeted them, and said: the Prophet ﷺ used to do this.",
+  "ref": "Sahih al-Bukhari 6247",
+  "arabic": null,
+  "arabic_key": "أنه مر على صبيان فسلم عليهم وقال كان النبي صلى الله عليه وسلم يفعله",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 36,
+  "day": 36,
+  "theme": "family",
+  "template": "meet",
+  "title": "Kiss your child",
+  "lines": [
+   "A man said: I have ten children.",
+   "I have never kissed one.",
+   "^He ﷺ said: who shows no mercy, receives none."
+  ],
+  "quote_en": "Whoever does not show mercy will not be shown mercy.",
+  "ref": "Sahih al-Bukhari 5997",
+  "arabic": null,
+  "arabic_key": "من لا يرحم لا يرحم",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 37,
+  "day": 37,
+  "theme": "family",
+  "template": "home",
+  "title": "The best of you",
+  "lines": [
+   "Not the best in the masjid.",
+   "Not the best online.",
+   "^The best to his family."
+  ],
+  "quote_en": "The best of you is the best to his family, and I am the best of you to my family.",
+  "ref": "Jami‘ at-Tirmidhi 3895",
+  "arabic": null,
+  "arabic_key": "خيركم خيركم لأهله وأنا خيركم لأهلي",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 38,
+  "day": 38,
+  "theme": "family",
+  "template": "home",
+  "title": "Be kind to women",
+  "lines": [
+   "His advice, again and again.",
+   "Not a suggestion.",
+   "^Be good to women."
+  ],
+  "quote_en": "Treat women well.",
+  "ref": "Sahih al-Bukhari 5186",
+  "arabic": null,
+  "arabic_key": "استوصوا بالنساء خيرا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 39,
+  "day": 39,
+  "theme": "character",
+  "template": "meet",
+  "title": "Gentleness",
+  "lines": [
+   "Where it is found, it beautifies.",
+   "Where it is removed, it disfigures.",
+   "^Be gentle."
+  ],
+  "quote_en": "Gentleness is not found in anything except that it beautifies it.",
+  "ref": "Sahih Muslim 2594",
+  "arabic": null,
+  "arabic_key": "إن الرفق لا يكون في شيء إلا زانه ولا ينزع من شيء إلا شانه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 40,
+  "day": 40,
+  "theme": "character",
+  "template": "counter",
+  "title": "Real strength",
+  "lines": [
+   "Who is strong?",
+   "Not the one who wins every fight.",
+   "^The one who controls himself in anger."
+  ],
+  "quote_en": "The strong one is not the wrestler; the strong one is who controls himself when angry.",
+  "ref": "Sahih al-Bukhari 6114",
+  "arabic": null,
+  "arabic_key": "ليس الشديد بالصرعة إنما الشديد الذي يملك نفسه عند الغضب",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 41,
+  "day": 41,
+  "theme": "character",
+  "template": "counter",
+  "title": "Just one word",
+  "lines": [
+   "A man asked for advice.",
+   "He said it once.",
+   "^Do not become angry."
+  ],
+  "quote_en": "Do not become angry.",
+  "ref": "Sahih al-Bukhari 6116",
+  "arabic": null,
+  "arabic_key": "لا تغضب",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 42,
+  "day": 42,
+  "theme": "character",
+  "template": "counter",
+  "title": "Speak good, or be silent",
+  "lines": [
+   "Before you reply.",
+   "Before you post.",
+   "^Say something good, or stay silent."
+  ],
+  "quote_en": "Whoever believes in Allah and the Last Day, let him speak good or remain silent.",
+  "ref": "Sahih al-Bukhari 6018",
+  "arabic": null,
+  "arabic_key": "من كان يؤمن بالله واليوم الآخر فليقل خيرا أو ليصمت",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 43,
+  "day": 43,
+  "theme": "character",
+  "template": "counter",
+  "title": "What doesn’t concern you",
+  "lines": [
+   "Not every conversation is yours.",
+   "Not every business is yours.",
+   "^Leave what doesn’t concern you."
+  ],
+  "quote_en": "Part of the excellence of a person’s Islam is leaving what does not concern him.",
+  "ref": "Jami‘ at-Tirmidhi 2317",
+  "arabic": null,
+  "arabic_key": "من حسن إسلام المرء تركه ما لا يعنيه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 44,
+  "day": 44,
+  "theme": "character",
+  "template": "walk_light",
+  "title": "Truth leads somewhere",
+  "lines": [
+   "A small lie. Then another.",
+   "The path bends.",
+   "^Truth leads to righteousness."
+  ],
+  "quote_en": "Stick to truthfulness, for truthfulness leads to righteousness and righteousness leads to Paradise.",
+  "ref": "Sahih al-Bukhari 6094",
+  "arabic": null,
+  "arabic_key": "عليكم بالصدق فإن الصدق يهدي إلى البر وإن البر يهدي إلى الجنة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 45,
+  "day": 45,
+  "theme": "character",
+  "template": "walk_light",
+  "title": "Modesty",
+  "lines": [
+   "It is not weakness.",
+   "It is a branch of faith.",
+   "^Modesty brings only good."
+  ],
+  "quote_en": "Modesty is part of faith.",
+  "ref": "Sahih al-Bukhari 24",
+  "arabic": null,
+  "arabic_key": "الحياء من الإيمان",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 46,
+  "day": 46,
+  "theme": "character",
+  "template": "counter",
+  "title": "The heaviest thing on the scale",
+  "lines": [
+   "Prayer? Fasting? Charity?",
+   "Something sits beside them.",
+   "^Good character."
+  ],
+  "quote_en": "Nothing is heavier on the believer’s scale on the Day of Judgement than good character.",
+  "ref": "Jami‘ at-Tirmidhi 2002",
+  "arabic": null,
+  "arabic_key": "ما من شيء أثقل في ميزان المؤمن يوم القيامة من خلق حسن",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 47,
+  "day": 47,
+  "theme": "character",
+  "template": "give",
+  "title": "Humility raises you",
+  "lines": [
+   "Giving never made anyone poorer.",
+   "Forgiving never made anyone smaller.",
+   "^Humble yourself for Allah, and He raises you."
+  ],
+  "quote_en": "No one humbles himself for Allah except that Allah raises him.",
+  "ref": "Sahih Muslim 2588",
+  "arabic": null,
+  "arabic_key": "وما تواضع أحد لله إلا رفعه الله",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 48,
+  "day": 48,
+  "theme": "community",
+  "template": "give",
+  "title": "Secret charity",
+  "lines": [
+   "Seven people under His shade.",
+   "One gave so quietly.",
+   "^His left hand didn’t know what his right gave."
+  ],
+  "quote_en": "A man who gave charity and hid it so that his left hand did not know what his right had given.",
+  "ref": "Sahih al-Bukhari 660",
+  "arabic": null,
+  "arabic_key": "ورجل تصدق بصدقة فأخفاها حتى لا تعلم شماله ما تنفق يمينه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 49,
+  "day": 49,
+  "theme": "community",
+  "template": "meet",
+  "title": "Make peace between people",
+  "lines": [
+   "Better than fasting, prayer and charity?",
+   "He asked the companions.",
+   "^Reconciling between people."
+  ],
+  "quote_en": "Shall I tell you of something better than the rank of fasting, prayer and charity? Reconciling between people.",
+  "ref": "Jami‘ at-Tirmidhi 2509",
+  "arabic": null,
+  "arabic_key": "ألا أخبركم بأفضل من درجة الصيام والصلاة والصدقة قالوا بلى قال إصلاح ذات البين",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 50,
+  "day": 50,
+  "theme": "community",
+  "template": "home",
+  "title": "Don’t cut family ties",
+  "lines": [
+   "One of the heaviest warnings.",
+   "About something we do casually.",
+   "^The one who cuts ties will not enter Paradise."
+  ],
+  "quote_en": "The one who severs the ties of kinship will not enter Paradise.",
+  "ref": "Sahih al-Bukhari 5984",
+  "arabic": null,
+  "arabic_key": "لا يدخل الجنة قاطع رحم",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 51,
+  "day": 51,
+  "theme": "community",
+  "template": "home",
+  "title": "Ties lengthen life",
+  "lines": [
+   "Want more barakah?",
+   "More provision?",
+   "^Keep your family ties."
+  ],
+  "quote_en": "Whoever wishes to have his provision expanded and his life extended, let him maintain family ties.",
+  "ref": "Sahih al-Bukhari 5985",
+  "arabic": null,
+  "arabic_key": "من أحب أن يبسط له في رزقه وينسأ له في أثره فليصل رحمه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 52,
+  "day": 52,
+  "theme": "community",
+  "template": "home",
+  "title": "Even if they cut you off",
+  "lines": [
+   "They didn’t call you.",
+   "You called anyway.",
+   "^That is real connecting."
+  ],
+  "quote_en": "The one who maintains ties is not the one who merely returns the favour.",
+  "ref": "Sahih al-Bukhari 5991",
+  "arabic": null,
+  "arabic_key": "ليس الواصل بالمكافئ ولكن الواصل الذي إذا قطعت رحمه وصلها",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 53,
+  "day": 53,
+  "theme": "community",
+  "template": "give",
+  "title": "Ease someone’s hardship",
+  "lines": [
+   "Someone near you is struggling.",
+   "Quietly.",
+   "^Allah eases yours on the Day it matters."
+  ],
+  "quote_en": "Whoever relieves a believer of a worldly hardship, Allah will relieve him of a hardship on the Day of Resurrection.",
+  "ref": "Sahih Muslim 2699",
+  "arabic": null,
+  "arabic_key": "من نفس عن مؤمن كربة من كرب الدنيا نفس الله عنه كربة من كرب يوم القيامة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 54,
+  "day": 54,
+  "theme": "money",
+  "template": "give",
+  "title": "Pardon the debtor",
+  "lines": [
+   "A man lent to people.",
+   "Told his boys: forgive the struggling.",
+   "^Allah forgave him."
+  ],
+  "quote_en": "He would say to his young men: overlook him, perhaps Allah will overlook us.",
+  "ref": "Sahih al-Bukhari 2078",
+  "arabic": null,
+  "arabic_key": "تجاوزوا عنه لعل الله أن يتجاوز عنا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 55,
+  "day": 55,
+  "theme": "money",
+  "template": "give",
+  "title": "The honest merchant",
+  "lines": [
+   "Business is not a test you fail.",
+   "If you are honest.",
+   "^With the prophets and the truthful."
+  ],
+  "quote_en": "The truthful, trustworthy merchant is with the prophets, the truthful, and the martyrs.",
+  "ref": "Jami‘ at-Tirmidhi 1209",
+  "arabic": null,
+  "arabic_key": "التاجر الصدوق الأمين مع النبيين والصديقين والشهداء",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 56,
+  "day": 56,
+  "theme": "money",
+  "template": "give",
+  "title": "Be easy in dealings",
+  "lines": [
+   "When selling.",
+   "When buying.",
+   "^Allah’s mercy on the easygoing."
+  ],
+  "quote_en": "May Allah have mercy on a man who is lenient when he sells, buys and asks for his due.",
+  "ref": "Sahih al-Bukhari 2076",
+  "arabic": null,
+  "arabic_key": "رحم الله رجلا سمحا إذا باع وإذا اشترى وإذا اقتضى",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 57,
+  "day": 57,
+  "theme": "nature",
+  "template": "tree",
+  "title": "Plant a tree",
+  "lines": [
+   "A seed in your hand.",
+   "A bird, a person, an animal.",
+   "^Each meal is charity for you."
+  ],
+  "quote_en": "No Muslim plants a tree or sows a crop and a bird, person or animal eats from it, except that it is charity for him.",
+  "ref": "Sahih al-Bukhari 2320",
+  "arabic": null,
+  "arabic_key": "ما من مسلم يغرس غرسا أو يزرع زرعا فيأكل منه طير أو إنسان أو بهيمة إلا كان له به صدقة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 58,
+  "day": 58,
+  "theme": "nature",
+  "template": "give",
+  "title": "Mercy to animals",
+  "lines": [
+   "A man saw a thirsty dog.",
+   "He climbed down into a well.",
+   "^Forgiven for a cup of water."
+  ],
+  "quote_en": "There is a reward for every living creature.",
+  "ref": "Sahih al-Bukhari 2363",
+  "arabic": null,
+  "arabic_key": "في كل كبد رطبة أجر",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 59,
+  "day": 59,
+  "theme": "prayer",
+  "template": "walk_light",
+  "title": "The dua after wudu",
+  "lines": [
+   "Eight doors.",
+   "One sentence.",
+   "^Enter from whichever you wish."
+  ],
+  "quote_en": "The eight gates of Paradise are opened for him; he may enter by whichever he wishes.",
+  "ref": "Sahih Muslim 234",
+  "arabic": null,
+  "arabic_key": "إلا فتحت له أبواب الجنة الثمانية يدخل من أيها شاء",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 60,
+  "day": 60,
+  "theme": "prayer",
+  "template": "walk_light",
+  "title": "Sins fall away with wudu",
+  "lines": [
+   "Water over the face.",
+   "Hands. Feet.",
+   "^Sins drip away with the last drop."
+  ],
+  "quote_en": "When a Muslim servant performs wudu, every sin he looked at with his eyes leaves with the water.",
+  "ref": "Sahih Muslim 244",
+  "arabic": null,
+  "arabic_key": "إذا توضأ العبد المسلم فغسل وجهه خرج من وجهه كل خطيئة نظر إليها بعينيه مع الماء",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 61,
+  "day": null,
+  "theme": "food",
+  "template": "meal",
+  "title": "Don’t fill the stomach",
+  "lines": [
+   "The worst container a person fills.",
+   "He said it plainly.",
+   "^A few bites are enough."
+  ],
+  "quote_en": "No human fills a vessel worse than his stomach.",
+  "ref": "Jami‘ at-Tirmidhi 2380",
+  "arabic": null,
+  "arabic_key": "ما ملأ آدمي وعاء شرا من بطنه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 62,
+  "day": null,
+  "theme": "food",
+  "template": "meal",
+  "title": "He never criticised food",
+  "lines": [
+   "If he liked it, he ate.",
+   "If not, he left it.",
+   "^Never a word against it."
+  ],
+  "quote_en": "The Prophet ﷺ never criticised any food.",
+  "ref": "Sahih al-Bukhari 5409",
+  "arabic": null,
+  "arabic_key": "ما عاب النبي صلى الله عليه وسلم طعاما قط",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 63,
+  "day": null,
+  "theme": "food",
+  "template": "meal",
+  "title": "Finish what is on your plate",
+  "lines": [
+   "You don’t know where the barakah is.",
+   "He didn’t either.",
+   "^Lick the fingers."
+  ],
+  "quote_en": "You do not know in which part of your food the blessing lies.",
+  "ref": "Sahih Muslim 2034",
+  "arabic": null,
+  "arabic_key": "فإنه لا يدري في أي طعامه البركة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 64,
+  "day": null,
+  "theme": "food",
+  "template": "meal",
+  "title": "Food for two",
+  "lines": [
+   "Enough for two.",
+   "Enough for three.",
+   "^Share. It stretches."
+  ],
+  "quote_en": "The food of two is enough for three, and the food of three is enough for four.",
+  "ref": "Sahih al-Bukhari 5392",
+  "arabic": null,
+  "arabic_key": "طعام الاثنين كافي الثلاثة وطعام الثلاثة كافي الأربعة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 65,
+  "day": null,
+  "theme": "food",
+  "template": "meal",
+  "title": "After the meal",
+  "lines": [
+   "Plate empty.",
+   "One more sentence.",
+   "^Alhamdulillah."
+  ],
+  "quote_en": "Praise be to Allah, an abundant, pure and blessed praise.",
+  "ref": "Sahih al-Bukhari 5458",
+  "arabic": null,
+  "arabic_key": "الحمد لله حمدا كثيرا طيبا مباركا فيه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 66,
+  "day": null,
+  "theme": "food",
+  "template": "meal",
+  "title": "Drink in three breaths",
+  "lines": [
+   "Slow.",
+   "Calm.",
+   "^He drank in three breaths."
+  ],
+  "quote_en": "The Prophet ﷺ used to breathe three times while drinking.",
+  "ref": "Sahih Muslim 2028",
+  "arabic": null,
+  "arabic_key": "كان يتنفس في الشراب ثلاثا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 67,
+  "day": null,
+  "theme": "manners",
+  "template": "meet",
+  "title": "When someone sneezes",
+  "lines": [
+   "A small moment.",
+   "A beautiful exchange.",
+   "^Alhamdulillah. Yarhamukallah."
+  ],
+  "quote_en": "When one of you sneezes, let him say: Alhamdulillah, and his brother should say: Yarhamukallah.",
+  "ref": "Sahih al-Bukhari 6224",
+  "arabic": null,
+  "arabic_key": "إذا عطس أحدكم فليقل الحمد لله وليقل له أخوه يرحمك الله",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 68,
+  "day": null,
+  "theme": "manners",
+  "template": "meet",
+  "title": "When you yawn",
+  "lines": [
+   "It happens in every gathering.",
+   "He had a way.",
+   "^Cover your mouth."
+  ],
+  "quote_en": "When one of you yawns, let him cover his mouth with his hand, for Shaytan enters.",
+  "ref": "Sahih Muslim 2995",
+  "arabic": null,
+  "arabic_key": "إذا تثاءب أحدكم فليمسك بيده على فيه فإن الشيطان يدخل",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 69,
+  "day": null,
+  "theme": "manners",
+  "template": "home",
+  "title": "Ask permission, three times",
+  "lines": [
+   "Knock.",
+   "Wait.",
+   "^Three times, then leave."
+  ],
+  "quote_en": "Seeking permission is three times; if you are given permission, enter, otherwise return.",
+  "ref": "Sahih al-Bukhari 6245",
+  "arabic": null,
+  "arabic_key": "الاستئذان ثلاث فإن أذن لك وإلا فارجع",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 70,
+  "day": null,
+  "theme": "manners",
+  "template": "meet",
+  "title": "Shake hands",
+  "lines": [
+   "Two Muslims meet.",
+   "They shake hands.",
+   "^Forgiven before they part."
+  ],
+  "quote_en": "No two Muslims meet and shake hands except that they are forgiven before they part.",
+  "ref": "Sunan Abi Dawud 5212",
+  "arabic": null,
+  "arabic_key": "ما من مسلمين يلتقيان فيتصافحان إلا غفر لهما قبل أن يتفرقا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 71,
+  "day": null,
+  "theme": "manners",
+  "template": "meet",
+  "title": "Don’t whisper in front of a third",
+  "lines": [
+   "Three people.",
+   "Two whisper.",
+   "^The third is left out."
+  ],
+  "quote_en": "If you are three, two should not whisper together leaving out the third.",
+  "ref": "Sahih al-Bukhari 6288",
+  "arabic": null,
+  "arabic_key": "إذا كنتم ثلاثة فلا يتناجى اثنان دون الثالث",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 72,
+  "day": null,
+  "theme": "sleep",
+  "template": "sleep",
+  "title": "Sleep early, wake early",
+  "lines": [
+   "He disliked sleeping before Isha.",
+   "And talking after it.",
+   "^The night belongs to rest and prayer."
+  ],
+  "quote_en": "The Prophet ﷺ disliked sleeping before Isha and talking after it.",
+  "ref": "Sahih al-Bukhari 568",
+  "arabic": null,
+  "arabic_key": "كان يكره النوم قبلها والحديث بعدها",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 73,
+  "day": null,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "In Allah’s protection",
+  "lines": [
+   "Fajr in congregation.",
+   "A quiet promise.",
+   "^You are in Allah’s protection all day."
+  ],
+  "quote_en": "Whoever prays the morning prayer is in Allah’s protection.",
+  "ref": "Sahih Muslim 657",
+  "arabic": null,
+  "arabic_key": "من صلى الصبح فهو في ذمة الله",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 74,
+  "day": null,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "The two cool prayers",
+  "lines": [
+   "Fajr and Asr.",
+   "Two times many skip.",
+   "^Whoever prays them enters Paradise."
+  ],
+  "quote_en": "Whoever prays the two cool prayers will enter Paradise.",
+  "ref": "Sahih al-Bukhari 574",
+  "arabic": null,
+  "arabic_key": "من صلى البردين دخل الجنة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 75,
+  "day": null,
+  "theme": "prayer",
+  "template": "walk_light",
+  "title": "Friday",
+  "lines": [
+   "The best day the sun rises upon.",
+   "Every week.",
+   "^Treat it that way."
+  ],
+  "quote_en": "The best day on which the sun rises is Friday.",
+  "ref": "Sahih Muslim 854",
+  "arabic": null,
+  "arabic_key": "خير يوم طلعت عليه الشمس يوم الجمعة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 76,
+  "day": null,
+  "theme": "prayer",
+  "template": "prayer",
+  "title": "In sujood",
+  "lines": [
+   "Closest to your Lord.",
+   "Right now.",
+   "^Make dua."
+  ],
+  "quote_en": "The closest a servant is to his Lord is when he is prostrating, so make plenty of dua.",
+  "ref": "Sahih Muslim 482",
+  "arabic": null,
+  "arabic_key": "أقرب ما يكون العبد من ربه وهو ساجد فأكثروا الدعاء",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 77,
+  "day": null,
+  "theme": "dhikr",
+  "template": "walk_light",
+  "title": "The traveller’s dua",
+  "lines": [
+   "On the road.",
+   "Far from home.",
+   "^A dua that is not rejected."
+  ],
+  "quote_en": "Three supplications are answered, with no doubt: the oppressed, the traveller, and the parent.",
+  "ref": "Jami‘ at-Tirmidhi 1905",
+  "arabic": null,
+  "arabic_key": "ثلاث دعوات مستجابات لا شك فيهن دعوة الوالد ودعوة المسافر ودعوة المظلوم",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 78,
+  "day": null,
+  "theme": "dhikr",
+  "template": "prayer",
+  "title": "Istikhara",
+  "lines": [
+   "Two choices. No clarity.",
+   "He taught it like a surah.",
+   "^Ask Allah to choose."
+  ],
+  "quote_en": "The Prophet ﷺ used to teach us istikhara in all matters, just as he taught us a surah of the Quran.",
+  "ref": "Sahih al-Bukhari 1162",
+  "arabic": null,
+  "arabic_key": "كان يعلمنا الاستخارة في الأمور كلها كما يعلمنا السورة من القرآن",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 79,
+  "day": null,
+  "theme": "dhikr",
+  "template": "prayer",
+  "title": "In distress",
+  "lines": [
+   "When everything feels heavy.",
+   "He said this.",
+   "^La ilaha illallah al-‘Azim al-Halim."
+  ],
+  "quote_en": "There is no god but Allah, the Great, the Forbearing.",
+  "ref": "Sahih al-Bukhari 6345",
+  "arabic": null,
+  "arabic_key": "لا إله إلا الله العظيم الحليم",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 80,
+  "day": null,
+  "theme": "death",
+  "template": "walk_light",
+  "title": "Visit the graves",
+  "lines": [
+   "Walk through a cemetery.",
+   "Quietly.",
+   "^It reminds you of the Hereafter."
+  ],
+  "quote_en": "Visit the graves, for they remind you of death.",
+  "ref": "Sahih Muslim 976",
+  "arabic": null,
+  "arabic_key": "فزوروا القبور فإنها تذكر الموت",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 81,
+  "day": null,
+  "theme": "death",
+  "template": "walk_light",
+  "title": "Attend the funeral",
+  "lines": [
+   "One qirat of reward.",
+   "Like a mountain.",
+   "^Join the funeral prayer."
+  ],
+  "quote_en": "Whoever attends a funeral until the prayer is offered gets one qirat.",
+  "ref": "Sahih al-Bukhari 1325",
+  "arabic": null,
+  "arabic_key": "من شهد الجنازة حتى يصلى عليها فله قيراط",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 82,
+  "day": null,
+  "theme": "death",
+  "template": "home",
+  "title": "Patience at the first blow",
+  "lines": [
+   "The first moment of grief.",
+   "That is when it counts.",
+   "^Patience at the first shock."
+  ],
+  "quote_en": "Patience is at the first shock.",
+  "ref": "Sahih al-Bukhari 1283",
+  "arabic": null,
+  "arabic_key": "إنما الصبر عند الصدمة الأولى",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 83,
+  "day": null,
+  "theme": "character",
+  "template": "counter",
+  "title": "A believer’s affair",
+  "lines": [
+   "Good news: gratitude.",
+   "Hardship: patience.",
+   "^Both are good for the believer."
+  ],
+  "quote_en": "How wonderful is the affair of the believer, for all of it is good for him.",
+  "ref": "Sahih Muslim 2999",
+  "arabic": null,
+  "arabic_key": "عجبا لأمر المؤمن إن أمره كله خير",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 84,
+  "day": null,
+  "theme": "manners",
+  "template": "meet",
+  "title": "Thank people",
+  "lines": [
+   "A quick message.",
+   "A simple sentence.",
+   "^Whoever doesn’t thank people hasn’t thanked Allah."
+  ],
+  "quote_en": "Whoever does not thank people has not thanked Allah.",
+  "ref": "Sunan Abi Dawud 4811",
+  "arabic": null,
+  "arabic_key": "من لا يشكر الناس لا يشكر الله",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 85,
+  "day": null,
+  "theme": "manners",
+  "template": "meet",
+  "title": "Jazakallahu khayran",
+  "lines": [
+   "Someone did you a favour.",
+   "You have no way to repay.",
+   "^Say: Jazakallahu khayran."
+  ],
+  "quote_en": "Whoever has a favour done to him and says: Jazakallahu khayran, has done well in praising.",
+  "ref": "Jami‘ at-Tirmidhi 2035",
+  "arabic": null,
+  "arabic_key": "من صنع إليه معروف فقال لفاعله جزاك الله خيرا فقد أبلغ في الثناء",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 86,
+  "day": null,
+  "theme": "character",
+  "template": "meet",
+  "title": "The test of faith",
+  "lines": [
+   "Not complicated.",
+   "One test.",
+   "^Love for your brother what you love for yourself."
+  ],
+  "quote_en": "None of you truly believes until he loves for his brother what he loves for himself.",
+  "ref": "Sahih al-Bukhari 13",
+  "arabic": null,
+  "arabic_key": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 87,
+  "day": null,
+  "theme": "character",
+  "template": "meet",
+  "title": "Safe from your hands and tongue",
+  "lines": [
+   "Who is a Muslim?",
+   "He defined it simply.",
+   "^One people are safe from."
+  ],
+  "quote_en": "A Muslim is one from whose tongue and hand the Muslims are safe.",
+  "ref": "Sahih al-Bukhari 10",
+  "arabic": null,
+  "arabic_key": "المسلم من سلم المسلمون من لسانه ويده",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 88,
+  "day": null,
+  "theme": "character",
+  "template": "give",
+  "title": "Cover their faults",
+  "lines": [
+   "You know something.",
+   "You don’t share it.",
+   "^Allah covers you on the Day it matters."
+  ],
+  "quote_en": "Whoever covers a Muslim, Allah will cover him on the Day of Resurrection.",
+  "ref": "Sahih al-Bukhari 2442",
+  "arabic": null,
+  "arabic_key": "ومن ستر مسلما ستره الله يوم القيامة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 89,
+  "day": null,
+  "theme": "character",
+  "template": "meet",
+  "title": "Defend their honour",
+  "lines": [
+   "Someone is being spoken about.",
+   "They are not there.",
+   "^Defend them."
+  ],
+  "quote_en": "Whoever defends the honour of his brother, Allah will turn the Fire away from his face.",
+  "ref": "Jami‘ at-Tirmidhi 1931",
+  "arabic": null,
+  "arabic_key": "من رد عن عرض أخيه رد الله عن وجهه النار يوم القيامة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 90,
+  "day": null,
+  "theme": "character",
+  "template": "meet",
+  "title": "Don’t envy",
+  "lines": [
+   "Don’t envy. Don’t hate. Don’t turn away.",
+   "Be brothers.",
+   "^Slaves of Allah, brothers."
+  ],
+  "quote_en": "Do not envy one another, do not hate one another, and be servants of Allah as brothers.",
+  "ref": "Sahih al-Bukhari 6064",
+  "arabic": null,
+  "arabic_key": "لا تحاسدوا ولا تباغضوا ولا تدابروا وكونوا عباد الله إخوانا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 91,
+  "day": null,
+  "theme": "community",
+  "template": "meet",
+  "title": "Not three days",
+  "lines": [
+   "A silence that grows.",
+   "Three days.",
+   "^It is not permitted to cut off beyond that."
+  ],
+  "quote_en": "It is not permissible for a Muslim to abandon his brother for more than three nights.",
+  "ref": "Sahih al-Bukhari 6077",
+  "arabic": null,
+  "arabic_key": "لا يحل لمسلم أن يهجر أخاه فوق ثلاث",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 92,
+  "day": null,
+  "theme": "knowledge",
+  "template": "give",
+  "title": "Convey even one verse",
+  "lines": [
+   "You know one verse.",
+   "That is enough to start.",
+   "^Convey from me, even one verse."
+  ],
+  "quote_en": "Convey from me, even if it is one verse.",
+  "ref": "Sahih al-Bukhari 3461",
+  "arabic": null,
+  "arabic_key": "بلغوا عني ولو آية",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 93,
+  "day": null,
+  "theme": "knowledge",
+  "template": "give",
+  "title": "Learn and teach",
+  "lines": [
+   "Learn it.",
+   "Then teach it.",
+   "^The best of you."
+  ],
+  "quote_en": "The best of you is the one who learns the Quran and teaches it.",
+  "ref": "Sahih al-Bukhari 5027",
+  "arabic": null,
+  "arabic_key": "خيركم من تعلم القرآن وعلمه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 94,
+  "day": null,
+  "theme": "knowledge",
+  "template": "give",
+  "title": "Guide to good",
+  "lines": [
+   "You didn’t do it.",
+   "You told someone.",
+   "^Same reward as the doer."
+  ],
+  "quote_en": "Whoever guides to good has a reward like the one who does it.",
+  "ref": "Sahih Muslim 1893",
+  "arabic": null,
+  "arabic_key": "من دل على خير فله مثل أجر فاعله",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 95,
+  "day": null,
+  "theme": "knowledge",
+  "template": "give",
+  "title": "Call to guidance",
+  "lines": [
+   "One person listens.",
+   "Then another.",
+   "^Their rewards are yours too."
+  ],
+  "quote_en": "Whoever calls to guidance has a reward like the rewards of those who follow him.",
+  "ref": "Sahih Muslim 2674",
+  "arabic": null,
+  "arabic_key": "من دعا إلى هدى كان له من الأجر مثل أجور من تبعه",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 96,
+  "day": null,
+  "theme": "knowledge",
+  "template": "tree",
+  "title": "Ongoing charity",
+  "lines": [
+   "The record closes when you die.",
+   "Except three.",
+   "^Ongoing charity, beneficial knowledge, a righteous child."
+  ],
+  "quote_en": "When a person dies his deeds end except for three: ongoing charity, beneficial knowledge, a righteous child who prays for him.",
+  "ref": "Sahih Muslim 1631",
+  "arabic": null,
+  "arabic_key": "إذا مات الإنسان انقطع عنه عمله إلا من ثلاثة",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 97,
+  "day": null,
+  "theme": "community",
+  "template": "give",
+  "title": "Care for an orphan",
+  "lines": [
+   "Close. Like two fingers.",
+   "He held them up.",
+   "^Together in Paradise."
+  ],
+  "quote_en": "I and the one who cares for an orphan will be like this in Paradise.",
+  "ref": "Sahih al-Bukhari 6005",
+  "arabic": null,
+  "arabic_key": "أنا وكافل اليتيم في الجنة هكذا",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 98,
+  "day": null,
+  "theme": "dhikr",
+  "template": "counter",
+  "title": "End every gathering",
+  "lines": [
+   "Every gathering ends.",
+   "He taught how.",
+   "^A dua to close it."
+  ],
+  "quote_en": "Whoever sits in a gathering and says this before standing, what happened in it is forgiven.",
+  "ref": "Jami‘ at-Tirmidhi 3433",
+  "arabic": null,
+  "arabic_key": "سبحانك اللهم وبحمدك أشهد أن لا إله إلا أنت أستغفرك وأتوب إليك",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 99,
+  "day": null,
+  "theme": "character",
+  "template": "walk_light",
+  "title": "Small and consistent",
+  "lines": [
+   "Not the biggest deed.",
+   "Not the loudest.",
+   "^The most consistent, even if small."
+  ],
+  "quote_en": "The most beloved deeds to Allah are the most consistent, even if small.",
+  "ref": "Sahih al-Bukhari 6464",
+  "arabic": null,
+  "arabic_key": "أحب الأعمال إلى الله أدومها وإن قل",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ },
+ {
+  "id": 100,
+  "day": null,
+  "theme": "character",
+  "template": "counter",
+  "title": "Actions by intentions",
+  "lines": [
+   "The very first hadith many scholars begin with.",
+   "Before any deed.",
+   "^Check your intention."
+  ],
+  "quote_en": "Actions are only by intentions, and every person gets what he intended.",
+  "ref": "Sahih al-Bukhari 1",
+  "arabic": null,
+  "arabic_key": "إنما الأعمال بالنيات وإنما لكل امرئ ما نوى",
+  "status": "unverified",
+  "shamela": null,
+  "translation_note": "Draft meaning-translation; compare with a published translation before posting."
+ }
+]
